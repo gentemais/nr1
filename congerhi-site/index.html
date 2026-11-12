@@ -297,7 +297,14 @@ header.nav .btn{padding:12px 22px;font-size:.8rem}
 .final p{max-width:640px;margin:0 auto 40px;font-size:1.15rem}
 
 /* ---------- lead form ---------- */
-.lead-form{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:12px;max-width:980px;margin:40px auto 0;text-align:left}
+.final .or{margin:26px auto 0;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:#8fb0d3}
+.lead-form{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:980px;margin:22px auto 0;text-align:left}
+.lead-form label{display:flex;flex-direction:column;gap:6px;font-size:.78rem;font-weight:600;letter-spacing:.04em;color:#cfdcec}
+.lead-form .consent{grid-column:1/-1;flex-direction:row;align-items:flex-start;gap:10px;font-weight:400;font-size:.85rem}
+.lead-form .consent input{width:18px;height:18px;flex:0 0 18px;margin-top:2px;accent-color:#4fb3ff}
+.lead-form button{grid-column:1/-1;justify-content:center}
+.lead-form .err{grid-column:1/-1;color:#ffb37a;font-weight:600;display:none}
+.lead-form input.bad{border-color:#ff8a65;background:rgba(255,138,101,.08)}
 .lead-form input,.lead-form select{width:100%;padding:17px 18px;border-radius:14px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff;font:inherit;font-size:.95rem}
 .lead-form input::placeholder{color:#9fb6cf}
 .lead-form select option{color:#000}
@@ -881,13 +888,20 @@ footer .copy{width:100%;border-top:1px solid rgba(255,255,255,.08);padding-top:2
   <div class="wrap">
     <div class="eyebrow luz" style="justify-content:center">Dos bastidores ao palco</div>
     <h2>A cortina abre em março.<br><span>Venha sem máscaras.</span></h2>
-    <p>Entre na lista e receba antes de todo mundo o 1º lote, com o menor valor do ano, e a revelação dos palestrantes.</p>
-    <form class="lead-form" id="leadForm">
-      <input name="nome" type="text" placeholder="Seu nome" required autocomplete="name">
-      <input name="email" type="email" placeholder="Seu e-mail" required autocomplete="email">
-      <input name="whatsapp" type="tel" placeholder="WhatsApp (DDD)" required autocomplete="tel">
-      <button class="btn btn-primary" type="submit">Quero o 1º lote</button>
-      <p class="ok" id="leadOk">Pronto! Você está na lista. Vamos avisar assim que o 1º lote abrir. 💙</p>
+    <p>Garanta seu passaporte enquanto o valor está no <span data-lote-nome>1º lote</span>, ou deixe seus dados para receber as novidades e a revelação dos palestrantes em primeira mão.</p>
+    <a class="btn btn-primary" href="#" data-link="presencial">Garantir meu passaporte · <span data-lote-preco>R$ 397</span></a>
+    <p class="or">ou cadastre-se para receber as novidades</p>
+    <form class="lead-form" id="leadForm" novalidate>
+      <label>Nome completo*<input name="nome" type="text" required autocomplete="name" minlength="3"></label>
+      <label>E-mail*<input name="email" type="email" required autocomplete="email"></label>
+      <label>WhatsApp com DDD*<input name="whatsapp" type="tel" required autocomplete="tel" inputmode="tel" placeholder="(14) 99999-9999"></label>
+      <label>Empresa*<input name="empresa" type="text" required autocomplete="organization"></label>
+      <label>Cargo*<input name="cargo" type="text" required autocomplete="organization-title"></label>
+      <label>Cidade*<input name="cidade" type="text" required autocomplete="address-level2"></label>
+      <label class="consent"><input name="consentimento" type="checkbox" required> Autorizo o CONGERHI a entrar em contato por e-mail e WhatsApp sobre o evento.*</label>
+      <button class="btn btn-primary" type="submit">Quero receber as novidades</button>
+      <p class="err" id="leadErr">Preencha todos os campos obrigatórios (*) corretamente.</p>
+      <p class="ok" id="leadOk">Pronto! Seus dados foram enviados. Em breve você recebe as novidades do CONGERHI 2027. 💙</p>
     </form>
   </div>
 </section>
@@ -918,11 +932,15 @@ const CONFIG = {
     premio: "",       // formulário de indicação do Prêmio Ser Gente
     patrocinio: "https://wa.me/5514996658272?text=Ol%C3%A1!%20Quero%20receber%20o%20m%C3%ADdia%20kit%20de%20patroc%C3%ADnio%20do%20CONGERHI%202027",
     whatsapp: "https://wa.me/5514996658272?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20CONGERHI%202027",
-    instagram: "",    // ex.: https://instagram.com/congerhi
+    instagram: "https://www.instagram.com/congerhi/",
     email: ""         // ex.: mailto:contato@congerhi.com.br
   },
-  // endpoint que recebe os leads (Google Apps Script, RD Station, n8n...). Vazio = só mostra a mensagem.
-  leadEndpoint: ""
+  // Google Forms que recebe os cadastros (todos os campos obrigatórios).
+  // action = link do formulário terminando em /formResponse; campos = ids "entry.NNN" de cada pergunta.
+  googleForm: {
+    action: "",
+    campos: { nome:"", email:"", whatsapp:"", empresa:"", cargo:"", cidade:"" }
+  }
 };
 
 // Lotes do Passaporte Presencial (fim = último dia do lote, horário de Brasília)
@@ -990,13 +1008,29 @@ const sticky = document.getElementById("stickyCta");
 const hero = document.getElementById("topo");
 new IntersectionObserver(([e]) => sticky.classList.toggle("show", !e.isIntersecting)).observe(hero);
 
-// Formulário de lista
+// Formulário de cadastro (validação + envio ao Google Forms)
+const wa = document.querySelector('#leadForm [name=whatsapp]');
+wa.addEventListener("input", () => {
+  const d = wa.value.replace(/\D/g,"").slice(0,11);
+  wa.value = d.length > 10 ? `(${d.slice(0,2)}) ${d.slice(2,7)}-${d.slice(7)}` : d.length > 6 ? `(${d.slice(0,2)}) ${d.slice(2,6)}-${d.slice(6)}` : d.length > 2 ? `(${d.slice(0,2)}) ${d.slice(2)}` : d;
+});
 document.getElementById("leadForm").addEventListener("submit", async ev => {
   ev.preventDefault();
-  const form = ev.target;
+  const form = ev.target, err = document.getElementById("leadErr");
+  let ok = true;
+  form.querySelectorAll("input").forEach(i => {
+    let v = i.checkValidity() && (i.type === "checkbox" || i.value.trim() !== "");
+    if (i.name === "whatsapp") v = v && /^\d{10,11}$/.test(i.value.replace(/\D/g,""));
+    i.classList.toggle("bad", !v); if (!v) ok = false;
+  });
+  if (!ok) { err.style.display = "block"; form.querySelector(".bad").focus(); return; }
+  err.style.display = "none";
   const data = Object.fromEntries(new FormData(form));
-  if (CONFIG.leadEndpoint) {
-    try { await fetch(CONFIG.leadEndpoint, {method:"POST", mode:"no-cors", headers:{"Content-Type":"application/json"}, body:JSON.stringify({...data, origem:"site-congerhi-2027"})}); } catch(e){}
+  const gf = CONFIG.googleForm;
+  if (gf.action) {
+    const body = new URLSearchParams();
+    Object.entries(gf.campos).forEach(([k, entry]) => { if (entry) body.append(entry, data[k] || ""); });
+    try { await fetch(gf.action, {method:"POST", mode:"no-cors", body}); } catch(e){}
   }
   form.querySelectorAll("input,button").forEach(i => i.disabled = true);
   document.getElementById("leadOk").style.display = "block";

@@ -8,8 +8,8 @@ No final do `index.html`, no bloco `CONFIG`:
 - `links.presencial`: link de pagamento Asaas do Passaporte (vazio = botão abre o WhatsApp (14) 99665-8272 com o lote atual)
 - Lotes: editar o array `LOTES` (valores e datas de fim); o site troca o lote sozinho
 - `links.premio`: formulário de indicação do Prêmio Ser Gente
-- `links.patrocinio`, `links.whatsapp`, `links.instagram`, `links.email`
-- `leadEndpoint`: URL que recebe os cadastros da lista do 1º lote (Google Apps Script, RD Station, n8n...)
+- `links.patrocinio`, `links.whatsapp`, `links.instagram` (@congerhi)
+- `googleForm`: link `/formResponse` do Google Forms e os ids `entry.NNN` de cada campo (nome, email, whatsapp, empresa, cargo, cidade)
 
 Enquanto um link estiver vazio, o botão leva para o formulário da lista.
 
@@ -23,3 +23,6 @@ Enquanto um link estiver vazio, o botão leva para o formulário da lista.
 - Data: usamos 19 e 20/03/2027 (Mídia Kit 2027). O Mapa do Evento diz 20 e 21/03, que foram as datas de 2026.
 - Nomes e fotos dos palestrantes (hoje são cards "Em breve").
 - Depoimentos e fotos reais de edições anteriores.
+
+## Publicação
+Ver `PUBLICAR.md`.
