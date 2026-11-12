@@ -616,14 +616,16 @@ header.nav .logo img{height:34px}
 .cota li{position:relative;padding-left:26px;font-size:.9rem}
 .cota li svg{position:absolute;left:0;top:3px;width:16px;height:16px;color:var(--petroleo)}.cota.top li svg{color:var(--lima)}
 .cota .btn{margin-top:26px;justify-content:center}
-.stand{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
-.stand-specs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.stand-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:34px}
+.stand-photo{width:100%;max-width:1100px;margin:0 auto;display:block;border-radius:22px;border:1px solid rgba(255,255,255,.15);box-shadow:0 40px 80px -40px rgba(0,0,0,.7)}
+.stand-specs{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:22px}
 .stand-specs div{border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:16px;background:rgba(255,255,255,.04)}
 .stand-specs b{display:block;color:var(--lima);font-size:1.3rem;font-weight:800}
 .stand-specs span{font-size:.85rem;color:#cfdcec}
-.stand img{border-radius:20px;border:1px solid rgba(255,255,255,.15)}
+
 .mapa img{border-radius:20px;box-shadow:0 30px 60px -30px rgba(7,25,35,.4);margin-top:30px;background:#fff}
-@media(max-width:960px){.cotas{grid-template-columns:1fr}.cota.top{transform:none}.why{grid-template-columns:1fr 1fr}.stand{grid-template-columns:1fr}}
+@media(max-width:960px){.cotas{grid-template-columns:1fr}.cota.top{transform:none}.why{grid-template-columns:1fr 1fr}.stand-head{grid-template-columns:1fr}.stand-specs{grid-template-columns:1fr 1fr 1fr}}
+@media(max-width:560px){.stand-specs{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body class="patro">
@@ -707,21 +709,23 @@ header.nav .logo img{height:34px}
 </section>
 
 <section class="sec dark" id="estande" style="padding-top:60px">
-  <div class="wrap stand">
-    <div class="reveal from-left">
-      <div class="eyebrow luz">Benefício exclusivo da cota Gestão</div>
-      <h2 class="title" style="color:#fff">Seu espaço de negócios <em>nos dois dias.</em></h2>
-      <p class="lead" style="color:#cfdcec">Sua empresa em evidência, presencialmente em Bauru, com os maiores empresários e lideranças de RH do interior.</p>
-      <div class="stand-specs">
-        <div><b>4 × 2,5 m</b><span>Painel de fundo</span></div>
-        <div><b>4 × 0,50 m</b><span>Testeira com a sua marca</span></div>
-        <div><b>1 × 1 m</b><span>Bancada de atendimento</span></div>
-        <div><b>Totem de LED</b><span>Vídeo 256 × 640 px</span></div>
-        <div><b>Bistrô</b><span>Com cadeiras ou banquetas</span></div>
-        <div><b>Tomada</b><span>Energia no estande</span></div>
+  <div class="wrap">
+    <div class="stand-head">
+      <div class="reveal from-left">
+        <div class="eyebrow luz">Benefício exclusivo da cota Gestão</div>
+        <h2 class="title" style="color:#fff">Seu espaço de negócios <em>nos dois dias.</em></h2>
       </div>
+      <p class="lead reveal" style="color:#cfdcec">Sua empresa em evidência, presencialmente em Bauru, com os maiores empresários e lideranças de RH do interior.</p>
     </div>
-    <img class="reveal zoom" src="assets/estande-medidas.jpg" alt="Exemplo de estande com as medidas: testeira 4 x 0,50 m, painel 4 x 2,5 m, bancada 1 x 1 m e totem de vídeo 256 x 640 pixels" loading="lazy">
+    <img class="stand-photo reveal zoom" src="assets/estande-medidas.jpg" alt="Exemplo de estande com as medidas: testeira 4 x 0,50 m, painel 4 x 2,5 m, bancada 1 x 1 m e totem de vídeo 256 x 640 pixels" loading="lazy">
+    <div class="stand-specs">
+      <div class="reveal"><b>4 × 2,5 m</b><span>Painel de fundo</span></div>
+      <div class="reveal"><b>4 × 0,50 m</b><span>Testeira com a sua marca</span></div>
+      <div class="reveal"><b>1 × 1 m</b><span>Bancada de atendimento</span></div>
+      <div class="reveal"><b>Totem LED</b><span>Vídeo 256 × 640 px</span></div>
+      <div class="reveal"><b>Bistrô</b><span>Com cadeiras ou banquetas</span></div>
+      <div class="reveal"><b>Tomada</b><span>Energia no estande</span></div>
+    </div>
   </div>
 </section>
 
