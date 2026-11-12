@@ -12,8 +12,14 @@ No final do `index.html`, no bloco `CONFIG`:
 
 Enquanto um link estiver vazio, o botão leva para o formulário da lista.
 
+## Fontes usadas
+- Identidade visual CONGERHI 2027 (azul petróleo #002F4E, azul profundo #00004C, cinza #939393, branco; Unispace/Montserrat).
+- Mídia Kit 2027 (tema, 4 atos, 5 pilares, ingressos, Prêmio Ser Gente).
+- Drive do evento: fotos reais do CONGERHI 2026, contatos, endereço, lotes de 2026 e depoimentos em vídeo.
+- Vídeo de abertura: reel do Instagram embutido no topo.
+
 ## Pendências de conteúdo
-- Confirmar a data: o Mídia Kit diz 19 e 20/03/2027; o Mapa do Evento diz 20 e 21/03.
+- Data: usamos 19 e 20/03/2027 (Mídia Kit 2027). O Mapa do Evento diz 20 e 21/03, que foram as datas de 2026.
 - Valores e lotes dos ingressos (hoje aparecem como "Em breve").
 - Nomes e fotos dos palestrantes (hoje são cards "Em breve").
 - Depoimentos e fotos reais de edições anteriores.
