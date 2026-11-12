@@ -143,6 +143,10 @@ header.nav .btn{padding:12px 22px;font-size:.78rem;white-space:nowrap}
 .tema blockquote{font-family:Montserrat,sans-serif;font-weight:800;text-transform:uppercase;font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.15;color:#fff;margin:34px 0 0;padding-top:26px;border-top:1px solid rgba(255,255,255,.15)}
 .tema blockquote span{color:var(--azul-luz)}
 @media(max-width:900px){.tema-grid{grid-template-columns:1fr}.tema-img{aspect-ratio:16/10}}
+.tema-img.mosaic{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1.25fr 1fr 1fr;gap:8px;border:0;border-radius:var(--raio);background:transparent}
+.mosaic img{border-radius:14px;filter:saturate(.85) brightness(.92)}
+.mosaic .m1{grid-column:1/3}
+.mosaic .m4{grid-column:1/3}
 
 /* ---------- jornada (bastidores + palco) ---------- */
 .journey{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:50px}
@@ -660,7 +664,12 @@ header.nav .logo img{height:34px}
 <!-- ================= TEMA ================= -->
 <section class="sec dark tema" id="tema">
   <div class="wrap tema-grid">
-    <div class="tema-img duo reveal"><img src="assets/turma-2026.jpg" alt="Participantes do CONGERHI 2026 reunidos no palco" loading="lazy" style="object-position:50% 40%"></div>
+    <div class="tema-img mosaic reveal" role="img" aria-label="Público do CONGERHI 2026 nas mesas assistindo às palestras">
+      <img class="m1" src="assets/publico-1.jpg" alt="" loading="lazy">
+      <img class="m2" src="assets/publico-2.jpg" alt="" loading="lazy">
+      <img class="m3" src="assets/publico-4.jpg" alt="" loading="lazy">
+      <img class="m4" src="assets/publico-3.jpg" alt="" loading="lazy">
+    </div>
     <div class="reveal">
       <div class="eyebrow luz">O tema da 12ª edição</div>
       <h2 class="title" style="color:#fff">Todo mundo usa uma máscara. <em>A pergunta é: qual você está vestindo?</em></h2>
@@ -861,7 +870,7 @@ header.nav .logo img{height:34px}
 <section class="sec dark host" id="host">
   <div class="wrap host-grid">
     <div class="host-photo reveal">
-      <div class="frame"><img src="assets/tati-souza.jpg" alt="Tati Souza, apresentadora e host do CONGERHI 2027"></div>
+      <div class="frame"><img src="assets/tati-palco.jpg" alt="Tati Souza no palco do CONGERHI 2026" style="object-position:30% 30%"></div>
       <span class="chip">Apresentadora &amp; Host</span>
     </div>
     <div class="reveal">
@@ -869,10 +878,10 @@ header.nav .logo img{height:34px}
       <h3>Tati <span>Souza</span></h3>
       <p class="role">CEO da Gente Mais · Especialista em desenvolvimento humano</p>
       <p>Tati é a voz que conduz os quatro atos do CONGERHI 2027 e costura cada palestra, cada painel e cada provocação em uma única experiência.</p>
-      <p>À frente da Gente Mais, ela dedica a carreira ao desenvolvimento de pessoas e lideranças. No palco, fala sobre o que a gente aprende nos bastidores: comportamento humano, conexão e relações que fazem a gestão acontecer de verdade.</p>
+      <p>À frente da Gente Mais e autora de 7 livros sobre desenvolvimento humano, ela dedica a carreira ao desenvolvimento de pessoas e lideranças. No palco, fala sobre o que a gente aprende nos bastidores: comportamento humano, conexão e relações que fazem a gestão acontecer de verdade.</p>
       <div class="book">
         <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14z"/><path d="M6.5 17A2.5 2.5 0 0 0 4 19.5 2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></div>
-        <div><b style="color:#fff">“O Segredo do Copo Cheio”</b><br><span style="font-size:.9rem">Autora do livro sobre desenvolvimento humano e o jeito de olhar para as pessoas.</span></div>
+        <div><b style="color:#fff">7 livros sobre desenvolvimento humano</b><br><span style="font-size:.9rem">Autora de sete obras, entre elas “O Segredo do Copo Cheio”, sobre comportamento humano e o jeito de olhar para as pessoas.</span></div>
       </div>
       <p class="sign">Bora fazer valer a pena.</p>
     </div>
