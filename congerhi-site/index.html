@@ -337,8 +337,22 @@ footer .copy{width:100%;border-top:1px solid rgba(255,255,255,.08);padding-top:2
 #premio .premio-bg{position:absolute;inset:0;background:url(assets/premio-ser-gente.jpg) center 85%/cover;opacity:.14}
 #premio .wrap{position:relative}
 .biz .spons{background:linear-gradient(140deg,rgba(0,0,76,.92),rgba(0,47,78,.88)),url(assets/estande-2026.jpg) center/cover}
-.anchor-price{margin:26px auto 0;max-width:760px;text-align:center;background:#fff;border:1px solid #dde2e8;border-radius:16px;padding:16px 20px;font-size:.95rem;color:#2a3546}
-.anchor-price b{color:var(--profundo)}
+.tk .price .next{display:block;font-size:.8rem;color:#c2410c;font-weight:600;margin-top:4px}
+.tk-pass{border:2px solid var(--azul-luz)}
+.lotes{margin:34px auto 0;max-width:980px;background:#fff;border:1px solid #dde2e8;border-radius:20px;padding:24px 26px}
+.lotes-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:16px}
+.lotes-head b{color:var(--profundo);font-size:.95rem}
+.lotes-head span{color:#c2410c;font-weight:700;font-size:.9rem}
+.lotes ol{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.lotes li{border:1px solid #e3e9f1;border-radius:14px;padding:14px 16px;position:relative}
+.lotes li span{display:block;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--cinza)}
+.lotes li b{font-family:"Chakra Petch";font-size:1.5rem;color:var(--profundo)}
+.lotes li small{display:block;font-size:.8rem;color:#56606e}
+.lotes li.past{opacity:.45}.lotes li.past b{text-decoration:line-through}
+.lotes li.now{background:linear-gradient(140deg,#00004C,#002F4E);border-color:transparent}
+.lotes li.now span{color:var(--azul-luz)}.lotes li.now b,.lotes li.now small{color:#fff}
+.lotes li.now::after{content:"Lote atual";position:absolute;top:-10px;right:12px;background:var(--azul-luz);color:#001a33;font-size:.6rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;padding:4px 8px;border-radius:999px}
+@media(max-width:700px){.lotes ol{grid-template-columns:1fr 1fr}}
 
 /* ---------- animações ---------- */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
@@ -353,7 +367,7 @@ footer .copy{width:100%;border-top:1px solid rgba(255,255,255,.08);padding-top:2
   (estão também no <script> no final da página)
 ====================================================================== -->
 
-<div class="topbar">🎟️ 12ª edição · 19 e 20 de março de 2027 · Bauru/SP — <a href="#ingressos">entre na lista do 1º lote</a></div>
+<div class="topbar">🎟️ Inscrições abertas · <span data-lote-nome>1º lote</span> por <b data-lote-preco>R$ 397</b> até <span data-lote-fim>30/12</span> — <a href="#ingressos">garantir meu passaporte</a></div>
 
 <header class="nav">
   <div class="wrap">
@@ -691,7 +705,7 @@ footer .copy{width:100%;border-top:1px solid rgba(255,255,255,.08);padding-top:2
     <div class="reveal" style="text-align:center;max-width:820px;margin:0 auto">
       <div class="eyebrow" style="color:var(--petroleo);justify-content:center">Ingressos</div>
       <h2 class="title">Escolha <em>o seu lugar</em> nessa história.</h2>
-      <p class="lead" style="margin:0 auto">Os valores e lotes serão divulgados em breve. Quem entra na lista agora recebe o <strong>1º lote em primeira mão</strong>, com o menor preço do ano.</p>
+      <p class="lead" style="margin:0 auto">Inscrições abertas. O valor sobe a cada virada de lote, então <strong>quem garante agora paga menos</strong>.</p>
     </div>
     <div class="tickets">
       <div class="tk reveal">
@@ -720,7 +734,8 @@ footer .copy{width:100%;border-top:1px solid rgba(255,255,255,.08);padding-top:2
         <div class="price"><small>Valor</small><b>Em breve</b></div>
         <a class="btn btn-primary" href="#lista" data-link="vip">Quero ser VIP</a>
       </div>
-      <div class="tk reveal">
+      <div class="tk tk-pass reveal">
+        <span class="ribbon">Inscrições abertas</span>
         <span class="type">Presencial · 2 dias</span>
         <h3>Passaporte Presencial</h3>
         <p class="desc">Os dois dias de palco em Bauru, com tudo o que acontece ao vivo.</p>
@@ -730,13 +745,21 @@ footer .copy{width:100%;border-top:1px solid rgba(255,255,255,.08);padding-top:2
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Networking com o RH do interior</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Cerimônia do Prêmio Ser Gente</li>
         </ul>
-        <div class="price"><small>Valor</small><b>Em breve</b></div>
-        <a class="btn btn-dark" href="#lista" data-link="presencial">Quero o 1º lote</a>
+        <div class="price"><small data-lote-nome-up>1º lote · até 30/12</small><b data-lote-preco>R$ 397</b><span class="next" data-lote-prox>Depois sobe para R$ 497</span></div>
+        <a class="btn btn-primary" href="#" data-link="presencial">Garantir meu passaporte</a>
       </div>
     </div>
-    <p class="anchor-price reveal">📈 Para ter uma ideia: em 2026, o passaporte começou em <b>R$ 397 no 1º lote</b> e terminou em <b>R$ 697</b> no último. Quem entra cedo paga menos.</p>
+    <div class="lotes reveal" id="lotes">
+      <div class="lotes-head"><b>Passaporte Presencial · lotes</b><span data-lote-faltam>O 1º lote termina em 30/12</span></div>
+      <ol>
+        <li data-i="0"><span>1º lote</span><b>R$ 397</b><small>até 30/12</small></li>
+        <li data-i="1"><span>2º lote</span><b>R$ 497</b><small>até 30/01</small></li>
+        <li data-i="2"><span>3º lote</span><b>R$ 597</b><small>até 28/02</small></li>
+        <li data-i="3"><span>4º lote</span><b>R$ 697</b><small>a partir de 01/03</small></li>
+      </ol>
+    </div>
     <div class="guarantee reveal">
-      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>1º lote enviado primeiro para quem está na lista</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Pague com Pix, boleto ou cartão pelo Asaas</div>
       <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5 7 21l5-3 5 3-1.5-8.5"/></svg>Certificado reconhecido pelo MEC</div>
       <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg>12 anos de história com o RH do interior</div>
     </div>
@@ -793,7 +816,7 @@ footer .copy{width:100%;border-top:1px solid rgba(255,255,255,.08);padding-top:2
       <details><summary>Quando e onde acontece o CONGERHI 2027?</summary><p>Nos dias 19 e 20 de março de 2027, das 9h às 19h, no Alameda Rodoserv Center, em Bauru/SP.</p></details>
       <details><summary>O que é a trilha digital (Bastidores)?</summary><p>São conteúdos gravados em cinco pilares (Roteiro, Ensaio, Iluminação, Figurino e Performance), disponíveis a partir de janeiro de 2027 por 12 meses, com certificação reconhecida pelo MEC.</p></details>
       <details><summary>Qual a diferença entre o Passaporte Presencial e o Ingresso VIP?</summary><p>O Passaporte dá acesso aos dois dias de congresso, aos quatro atos, ao networking e ao Prêmio Ser Gente. O VIP inclui tudo isso, além de mesa próxima ao palco, acesso aos palestrantes do presencial e o livro “O Segredo do Copo Cheio”, de Tati Souza, autografado.</p></details>
-      <details><summary>Quando os valores serão divulgados?</summary><p>Em breve. Entre na lista para receber o 1º lote em primeira mão, antes da abertura geral.</p></details>
+      <details><summary>Quanto custa o Passaporte Presencial?</summary><p>1º lote: R$ 397 até 30/12. 2º lote: R$ 497 até 30/01. 3º lote: R$ 597 até 28/02. 4º lote: R$ 697 a partir de 01/03. Quanto antes você garante, menos paga.</p></details>
       <details><summary>Quem são os palestrantes?</summary><p>O elenco de 2027 está sendo confirmado e será revelado nas próximas semanas. Já está confirmada a Tati Souza, CEO da Gente Mais, como apresentadora e host. Em 2026, passaram pelo palco nomes como Eugenio Mussak e Pedro Cortella.</p></details>
       <details><summary>Recebo certificado?</summary><p>Sim. O certificado geral, reconhecido pelo MEC, é emitido depois que você consome os conteúdos das trilhas digitais e participa do presencial.</p></details>
       <details><summary>Tem condição para levar a equipe?</summary><p>Sim. Temos pacotes empresariais com valores especiais. Fale com a equipe pelo WhatsApp (14) 99665-8272.</p></details>
@@ -828,8 +851,8 @@ footer .copy{width:100%;border-top:1px solid rgba(255,255,255,.08);padding-top:2
 </footer>
 
 <div class="sticky-cta" id="stickyCta">
-  <div><small>19 e 20/03 · Bauru</small><b>1º lote em breve</b></div>
-  <a class="btn btn-primary" href="#lista">Entrar na lista</a>
+  <div><small>19 e 20/03 · Bauru</small><b><span data-lote-nome>1º lote</span> · <span data-lote-preco>R$ 397</span></b></div>
+  <a class="btn btn-primary" href="#ingressos">Garantir</a>
 </div>
 
 <script>
@@ -840,7 +863,7 @@ footer .copy{width:100%;border-top:1px solid rgba(255,255,255,.08);padding-top:2
 const CONFIG = {
   dataEvento: "2027-03-19T09:00:00-03:00",
   links: {
-    presencial: "",   // checkout do Passaporte Presencial
+    presencial: "",   // link de pagamento Asaas do Passaporte (vazio = WhatsApp com o lote atual)
     vip: "",          // checkout do Ingresso VIP
     digital: "",      // checkout das Trilhas Digitais
     premio: "",       // formulário de indicação do Prêmio Ser Gente
@@ -852,6 +875,32 @@ const CONFIG = {
   // endpoint que recebe os leads (Google Apps Script, RD Station, n8n...). Vazio = só mostra a mensagem.
   leadEndpoint: ""
 };
+
+// Lotes do Passaporte Presencial (fim = último dia do lote, horário de Brasília)
+const LOTES = [
+  {nome:"1º lote", preco:397, fim:"2026-12-30"},
+  {nome:"2º lote", preco:497, fim:"2027-01-30"},
+  {nome:"3º lote", preco:597, fim:"2027-02-28"},
+  {nome:"4º lote", preco:697, fim:"2027-03-20"}
+];
+(function(){
+  const now = Date.now();
+  const fimTs = l => new Date(l.fim + "T23:59:59-03:00").getTime();
+  let i = LOTES.findIndex(l => now <= fimTs(l)); if (i < 0) i = LOTES.length - 1;
+  const L = LOTES[i], P = LOTES[i+1];
+  const brl = v => "R$ " + v.toLocaleString("pt-BR");
+  const dm = d => d.slice(8,10) + "/" + d.slice(5,7);
+  const dias = Math.max(0, Math.ceil((fimTs(L) - now) / 864e5));
+  document.querySelectorAll("[data-lote-nome]").forEach(e => e.textContent = L.nome);
+  document.querySelectorAll("[data-lote-preco]").forEach(e => e.textContent = brl(L.preco));
+  document.querySelectorAll("[data-lote-fim]").forEach(e => e.textContent = P ? dm(L.fim) : "o evento");
+  document.querySelectorAll("[data-lote-nome-up]").forEach(e => e.textContent = L.nome + (P ? " · até " + dm(L.fim) : " · último lote"));
+  document.querySelectorAll("[data-lote-prox]").forEach(e => e.textContent = P ? "Depois sobe para " + brl(P.preco) : "Último lote antes do evento");
+  document.querySelectorAll("[data-lote-faltam]").forEach(e => e.textContent = P ? (dias <= 1 ? "Último dia do " + L.nome + "!" : "Faltam " + dias + " dias para o valor subir") : "Último lote");
+  document.querySelectorAll(".lotes li").forEach(li => { const k = +li.dataset.i; li.classList.toggle("past", k < i); li.classList.toggle("now", k === i); });
+  // sem link do Asaas ainda: botão do passaporte abre o WhatsApp já com o lote
+  if (!CONFIG.links.presencial) CONFIG.links.presencial = "https://wa.me/5514996658272?text=" + encodeURIComponent("Olá! Quero garantir meu Passaporte Presencial do CONGERHI 2027 no " + L.nome + " (" + brl(L.preco) + ").");
+})();
 
 // Aplica links configurados
 document.querySelectorAll("[data-link]").forEach(a => {
