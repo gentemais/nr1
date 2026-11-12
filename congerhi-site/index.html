@@ -589,6 +589,28 @@ header.nav .logo img{height:34px}
 @media(max-width:900px){.fs{flex-basis:calc((100% - 16px)/2)}}
 @media(max-width:560px){.fs{flex-basis:100%}}
 
+
+/* ---------- tema: tirar a máscara ---------- */
+.tema-stage{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:#071923;color:#fff;border-radius:44px 44px 0 0;margin-top:-44px;z-index:1;--x:70%;--y:45%;--r:220px}
+.ts-bg{position:absolute;inset:-4%;background:url(assets/tema-plateia.jpg) center/cover no-repeat}
+.ts-masked{filter:blur(12px) grayscale(1) brightness(.6);transform:scale(1.05)}
+.ts-clear{filter:saturate(1.05);-webkit-mask-image:radial-gradient(circle var(--r) at var(--x) var(--y),#000 55%,transparent 100%);mask-image:radial-gradient(circle var(--r) at var(--x) var(--y),#000 55%,transparent 100%);transition:-webkit-mask-size .3s}
+.ts-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,25,35,.92) 0%,rgba(7,25,35,.7) 45%,rgba(7,25,35,.1) 75%,transparent 100%),linear-gradient(0deg,rgba(7,25,35,.6),transparent 30%);pointer-events:none}
+.ts-content{position:relative;z-index:2;padding:120px 24px;max-width:var(--max)}
+.ts-content>*{max-width:640px}
+.ts-title{font-size:clamp(2.2rem,4.8vw,4rem);font-weight:900;line-height:1.02;letter-spacing:-.02em;margin-bottom:28px}
+.ts-title span{display:block;color:var(--lima)}
+.ts-masks{display:flex;flex-direction:column;gap:10px;margin-bottom:26px}
+.ts-masks span{align-self:flex-start;padding:12px 20px;border-radius:999px;border:1px solid rgba(255,255,255,.25);background:rgba(7,25,35,.55);backdrop-filter:blur(6px);font-weight:600;font-size:.98rem;transition:transform .4s,background .4s,color .4s}
+.ts-masks span::before{content:"🎭 ";}
+.ts-masks span:hover{transform:translateX(8px);background:var(--lima);color:#071923}
+.ts-text{font-size:1.1rem;color:#d7e1ea;margin-bottom:24px}
+.ts-quote{font-weight:800;text-transform:uppercase;font-size:clamp(1.2rem,2.2vw,1.6rem);line-height:1.2;padding-top:22px;border-top:1px solid rgba(255,255,255,.2)}
+.ts-quote span{color:var(--lima)}
+.ts-hint{position:absolute;z-index:3;right:5%;bottom:34px;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:#cfdcec;background:rgba(7,25,35,.6);padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.2)}
+.ts-masks span:nth-child(2){transition-delay:.1s}.ts-masks span:nth-child(3){transition-delay:.2s}
+@media(max-width:900px){.ts-shade{background:rgba(7,25,35,.72)}.ts-hint{display:none}.tema-stage{--r:160px}}
+
 /* ---------- animações ---------- */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
 .reveal.in{opacity:1;transform:none}
@@ -710,22 +732,22 @@ header.nav .logo img{height:34px}
 </section>
 
 <!-- ================= TEMA ================= -->
-<section class="sec dark tema" id="tema">
-  <div class="wrap tema-grid">
-    <div class="tema-img mosaic reveal" role="img" aria-label="Público do CONGERHI 2026 nas mesas assistindo às palestras">
-      <img class="m1" src="assets/publico-1.jpg" alt="" loading="lazy">
-      <img class="m2" src="assets/publico-2.jpg" alt="" loading="lazy">
-      <img class="m3" src="assets/publico-4.jpg" alt="" loading="lazy">
-      <img class="m4" src="assets/publico-3.jpg" alt="" loading="lazy">
+<section class="tema-stage" id="tema" aria-label="O tema da 12ª edição">
+  <div class="ts-bg ts-masked" aria-hidden="true"></div>
+  <div class="ts-bg ts-clear" aria-hidden="true"></div>
+  <div class="ts-shade" aria-hidden="true"></div>
+  <div class="wrap ts-content">
+    <div class="eyebrow luz reveal">O tema da 12ª edição</div>
+    <h2 class="ts-title reveal">Todo mundo usa uma máscara.<span>Qual você está vestindo?</span></h2>
+    <div class="ts-masks reveal" aria-label="Máscaras do dia a dia">
+      <span>A de quem tem resposta pra tudo</span>
+      <span>A de quem está bem mesmo quando não está</span>
+      <span>A de quem precisa parecer forte pela equipe</span>
     </div>
-    <div class="reveal">
-      <div class="eyebrow luz">O tema da 12ª edição</div>
-      <h2 class="title" style="color:#fff">Todo mundo usa uma máscara. <em>A pergunta é: qual você está vestindo?</em></h2>
-      <p>No RH e na liderança, às vezes são várias ao mesmo tempo: a de quem tem resposta pra tudo, a de quem está bem mesmo quando não está, a de quem precisa parecer forte pela equipe inteira, mesmo sendo, antes de tudo, gente.</p>
-      <p>Nem toda máscara é um problema. Algumas protegem, outras cuidam. O risco está em perder de vista qual delas estamos vestindo e deixar que a máscara vire a nossa cara.</p>
-      <blockquote>Por trás de todo cargo existe uma pessoa. <span class="prata">E é ela que sustenta empresas de verdade.</span></blockquote>
-    </div>
+    <p class="ts-text reveal">Nem toda máscara é um problema. Algumas protegem, outras cuidam. O risco está em perder de vista qual delas estamos vestindo e deixar que a máscara vire a nossa cara.</p>
+    <blockquote class="ts-quote reveal">Por trás de todo cargo existe uma pessoa. <span>E é ela que sustenta empresas de verdade.</span></blockquote>
   </div>
+  <span class="ts-hint" aria-hidden="true">Passe o cursor e tire a máscara</span>
 </section>
 
 
@@ -1342,6 +1364,18 @@ document.querySelectorAll(".atos,.pilares,.speakers,.premio-grid,.big-stats,.for
   g.querySelector(".next").onclick=()=>{go(i+1);reset();}; g.querySelector(".prev").onclick=()=>{go(i-1);reset();};
   g.addEventListener("mouseenter",()=>clearInterval(timer)); g.addEventListener("mouseleave",reset);
   addEventListener("resize",()=>go(i)); go(0); reset();
+})();
+
+// Tema: holofote que "tira a máscara" da plateia
+(function(){
+  const st=document.querySelector(".tema-stage"); if(!st) return;
+  let auto=true, t0=performance.now();
+  const set=(x,y)=>{ st.style.setProperty("--x",x+"px"); st.style.setProperty("--y",y+"px"); };
+  st.addEventListener("pointermove",e=>{ auto=false; const r=st.getBoundingClientRect(); set(e.clientX-r.left,e.clientY-r.top); });
+  st.addEventListener("pointerleave",()=>{ auto=true; });
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const loop=t=>{ if(auto){ const r=st.getBoundingClientRect(), k=(t-t0)/1000; set(r.width*(0.68+0.18*Math.sin(k*0.6)), r.height*(0.45+0.2*Math.sin(k*0.9))); } requestAnimationFrame(loop); };
+  requestAnimationFrame(loop);
 })();
 
 // Contagem regressiva
