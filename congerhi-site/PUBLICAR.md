@@ -4,15 +4,27 @@ O site é estático: só arquivos HTML, imagens e CSS/JS embutidos. Não precisa
 
 ## O que subir
 - `index.html`
+- `patrocinio.html`
 - pasta `assets/`
 
 (Não precisa subir `README.md`, `PUBLICAR.md` nem `preview.png`.)
+
+## Atenção ao domínio
+Hoje `congerhi.com.br` já mostra a home nova. Antes de publicar, decidir se este site **substitui** a home atual ou entra num subdomínio (ex.: `2027.congerhi.com.br`). Se for subdomínio, trocar o `server_name` e o certbot abaixo.
+
+## Alternativa: puxar direto do GitHub (dentro da VPS)
+```bash
+cd /var/www && git clone -b claude/beautiful-faraday-dgwefp https://github.com/gentemais/nr1.git congerhi-src
+ln -sfn /var/www/congerhi-src/congerhi-site /var/www/congerhi
+```
+Para atualizar depois: `cd /var/www/congerhi-src && git pull`.
+(Se o repositório for privado, usar uma chave de deploy do GitHub.)
 
 ## Passo a passo na VPS 1 (Contabo, onde ficam os sites do grupo)
 
 1. Copiar os arquivos para o servidor (do computador de quem tem o acesso):
    ```bash
-   scp -r index.html assets root@169.58.209.206:/var/www/congerhi/
+   scp -r index.html patrocinio.html assets root@169.58.209.206:/var/www/congerhi/
    ```
 2. Criar o site no Nginx (`/etc/nginx/sites-available/congerhi`):
    ```nginx
