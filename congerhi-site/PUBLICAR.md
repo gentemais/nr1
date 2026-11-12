@@ -30,7 +30,7 @@ Para atualizar depois: `cd /var/www/congerhi-src && git pull`.
    ```nginx
    server {
        listen 80;
-       server_name congerhi.com.br www.congerhi.com.br;
+       server_name 2027.congerhi.com.br;
        root /var/www/congerhi;
        index index.html;
        location / { try_files $uri $uri/ /index.html; }
@@ -42,10 +42,10 @@ Para atualizar depois: `cd /var/www/congerhi-src && git pull`.
    ln -s /etc/nginx/sites-available/congerhi /etc/nginx/sites-enabled/
    nginx -t && systemctl reload nginx
    ```
-4. No Registro.br, apontar o domínio (registro A de `congerhi.com.br` e `www`) para `169.58.209.206`.
+4. No Registro.br, apontar o domínio (registro A `2027`) para `169.58.209.206`.
 5. Gerar o HTTPS:
    ```bash
-   certbot --nginx -d congerhi.com.br -d www.congerhi.com.br
+   certbot --nginx -d 2027.congerhi.com.br
    ```
 
 Se o domínio escolhido for outro (ex.: eventocongerhi.com.br), é só trocar o `server_name` e o certbot.
