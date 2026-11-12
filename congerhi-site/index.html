@@ -241,18 +241,27 @@ header.nav .btn{padding:12px 22px;font-size:.8rem}
 .tk .price small{display:block;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--cinza);font-weight:700}
 .tk .price b{font-family:"Chakra Petch";font-size:1.6rem;color:var(--profundo)}
 .tk .btn{justify-content:center}
-.tk.vip{background:linear-gradient(160deg,var(--profundo) 0%,#06306a 100%);color:#dbe8f6;border:0;transform:scale(1.03);box-shadow:0 40px 80px -30px rgba(0,0,76,.6)}
-.tk.vip h3{color:#fff}
-.tk.vip .type{color:var(--azul-luz)}
-.tk.vip .desc{color:#c7d6e8}
-.tk.vip li svg{color:var(--azul-luz)}
-.tk.vip .price{border-color:rgba(255,255,255,.12)}
-.tk.vip .price b{color:#fff}
+.pass{display:grid;grid-template-columns:1.4fr 1fr;margin:54px auto 0;max-width:980px;background:#fff;border:2px solid var(--azul-luz);border-radius:26px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(0,0,76,.45)}
+.pass-info{padding:40px}
+.pass-info .type{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--cinza)}
+.pass-info h3{font-family:"Chakra Petch";text-transform:uppercase;font-size:2rem;line-height:1.05;color:var(--profundo);margin:10px 0 12px}
+.pass-info .desc{color:#3c4858;margin-bottom:20px}
+.pass-info ul{list-style:none;display:grid;gap:11px}
+.pass-info li{position:relative;padding-left:28px;font-size:.97rem}
+.pass-info li svg{position:absolute;left:0;top:3px;width:18px;height:18px;color:#1e8be6}
+.pass-buy{position:relative;background:linear-gradient(160deg,var(--profundo),#06306a);color:#dbe8f6;padding:48px 36px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:6px}
+.pass-buy .ribbon{background:var(--azul-luz);color:#001a33;font-size:.7rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:7px 16px;border-radius:999px;margin-bottom:14px}
+.pass-buy small{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--azul-luz)}
+.pass-price{font-family:"Chakra Petch";font-size:3.4rem;line-height:1;color:#fff}
+.pass-buy .next{font-size:.88rem;color:#ffb37a;font-weight:600;margin-bottom:18px}
+.pass-buy .btn{width:100%;justify-content:center}
+.pass-buy .pay{font-size:.8rem;color:#a9c3e0;margin-top:8px}
+@media(max-width:860px){.pass{grid-template-columns:1fr}.pass-info{padding:30px}}
 .tk .ribbon{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--azul-luz);color:#001a33;font-size:.7rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:7px 16px;border-radius:999px;white-space:nowrap}
 .guarantee{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .guarantee div{display:flex;gap:14px;align-items:center;font-size:.92rem;color:#2a3546}
 .guarantee svg{flex:0 0 28px;width:28px;height:28px;color:var(--petroleo)}
-@media(max-width:960px){.tickets{grid-template-columns:1fr}.tk.vip{transform:none}.guarantee{grid-template-columns:1fr}}
+@media(max-width:960px){.guarantee{grid-template-columns:1fr}}
 
 /* ---------- empresas / patrocínio ---------- */
 .biz{display:grid;grid-template-columns:1fr 1fr;gap:24px}
@@ -531,7 +540,7 @@ footer .copy{width:100%;border-top:1px solid rgba(255,255,255,.08);padding-top:2
       <div class="ti" role="listitem"><i>2022</i><b>Juntos por um mundo melhor</b><span>Formato híbrido, com palestra magna de Marcos Rossi</span></div>
       <div class="ti" role="listitem"><i>2023</i><b>As Pessoas no Centro do Mundo</b><span>Alameda Rodoserv Center e Summit CONGERHI em Niterói/RJ</span></div>
       <div class="ti" role="listitem"><i>2024</i><b>Metaverso Corporativo</b><span>Trilhas digitais com mais de 100 conteúdos</span></div>
-      <div class="ti" role="listitem"><i>2025</i><b>Legado</b><span>Waldez Ludwig, Alberto Roitman direto de Davos e painel GPTW</span></div>
+      <div class="ti" role="listitem"><i>2025</i><b>Legacy</b><span>Waldez Ludwig e Alberto Roitman, direto de Davos</span></div>
       <div class="ti" role="listitem"><i>2026</i><b>Pessoas, Propósito e Performance</b><span>1.200 participantes e certificação reconhecida pelo MEC</span></div>
       <div class="ti now" role="listitem"><i>2027</i><b>Sem Máscaras</b><span>A 12ª edição. Você vem?</span></div>
     </div>
@@ -539,11 +548,11 @@ footer .copy{width:100%;border-top:1px solid rgba(255,255,255,.08);padding-top:2
     <div class="walls">
       <div class="wall reveal">
         <h3>Quem já passou pelo palco</h3>
-        <p>Eugenio Mussak · Geraldo Rufino · Rodrigo Pimentel · Marco Ornellas · Waldez Ludwig · Marcos Rossi · Vania Ferrari · Sidnei Oliveira · Rogério Leme · René Simões · Caçadores de Bons Exemplos · Alberto Roitman · Pedro Cortella · Ben · e mais de 100 especialistas</p>
+        <p>Eugenio Mussak · Geraldo Rufino · Rodrigo Pimentel · Marco Ornellas · Waldez Ludwig · Marcos Rossi · Vania Ferrari · Sidnei Oliveira · Rogério Leme · René Simões · Caçadores de Bons Exemplos · Alberto Roitman · Pedro Cortella · Ben Zruel · e mais de 100 especialistas</p>
       </div>
       <div class="wall reveal">
         <h3>Marcas que já estiveram com a gente</h3>
-        <p>TOTVS · Senior · Porto Seguro · Unimed Bauru · CIEE · Swile · UP Brasil · SENAC · Mapfre · Qualitymark · GPTW · ABRH-SP</p>
+        <p>TOTVS · Senior · Porto Seguro · Unimed Bauru · CIEE · Swile · UP Brasil · SENAC · Mapfre · Qualitymark</p>
       </div>
       <div class="wall reveal">
         <h3>Empresas reconhecidas no Prêmio Ser Gente</h3>
@@ -694,7 +703,7 @@ footer .copy{width:100%;border-top:1px solid rgba(255,255,255,.08);padding-top:2
       <p>À frente da Gente Mais, ela dedica a carreira ao desenvolvimento de pessoas e lideranças. No palco, fala sobre o que a gente aprende nos bastidores: comportamento humano, conexão e relações que fazem a gestão acontecer de verdade.</p>
       <div class="book">
         <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14z"/><path d="M6.5 17A2.5 2.5 0 0 0 4 19.5 2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></div>
-        <div><b style="color:#fff">“O Segredo do Copo Cheio”</b><br><span style="font-size:.9rem">Livro da Tati, que vai autografado para quem garantir o Ingresso VIP.</span></div>
+        <div><b style="color:#fff">“O Segredo do Copo Cheio”</b><br><span style="font-size:.9rem">Autora do livro sobre desenvolvimento humano e o jeito de olhar para as pessoas.</span></div>
       </div>
       <p class="sign">Bora fazer valer a pena.</p>
     </div>
@@ -717,7 +726,7 @@ footer .copy{width:100%;border-top:1px solid rgba(255,255,255,.08);padding-top:2
     </div>
     <div class="alumni reveal">
       <span class="alumni-label">Já passaram pelo palco · CONGERHI 2026</span>
-      <div class="alumni-names"><b>Eugenio Mussak</b><b>Pedro Cortella</b><b>Ben</b></div>
+      <div class="alumni-names"><b>Eugenio Mussak</b><b>Pedro Cortella</b><b>Ben Zruel</b></div>
     </div>
     <div class="notify reveal">
       <p>🔔 Quer saber primeiro quem sobe ao palco em 2027?</p>
@@ -772,49 +781,29 @@ footer .copy{width:100%;border-top:1px solid rgba(255,255,255,.08);padding-top:2
   <div class="wrap">
     <div class="reveal" style="text-align:center;max-width:820px;margin:0 auto">
       <div class="eyebrow" style="color:var(--petroleo);justify-content:center">Ingressos</div>
-      <h2 class="title">Escolha <em>o seu lugar</em> nessa história.</h2>
+      <h2 class="title">Um passaporte. <em>A jornada completa.</em></h2>
       <p class="lead" style="margin:0 auto">Inscrições abertas. O valor sobe a cada virada de lote, então <strong>quem garante agora paga menos</strong>.</p>
     </div>
-    <div class="tickets">
-      <div class="tk reveal">
-        <span class="type">Online · 12 meses</span>
-        <h3>Trilhas Digitais</h3>
-        <p class="desc">Os bastidores completos para estudar no seu ritmo, de onde estiver.</p>
+    <div class="pass reveal">
+      <div class="pass-info">
+        <span class="type">Passaporte CONGERHI 2027 · tudo incluso</span>
+        <h3>Passaporte Presencial + Trilha Digital</h3>
+        <p class="desc">Um único ingresso para viver a jornada completa: os bastidores durante 12 meses e o palco ao vivo em Bauru.</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>5 pilares em conteúdo gravado</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Acesso a partir de janeiro de 2027</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Certificação reconhecida pelo MEC</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg><b>2 dias presenciais</b>, 19 e 20/03, das 9h às 19h</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Os <b>4 atos do Palco</b> e networking com o RH do interior</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg><b>Trilha digital por 12 meses</b>, com os 5 pilares em conteúdo gravado</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg><b>Certificado reconhecido pelo MEC</b></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Cerimônia do <b>Prêmio Ser Gente</b></li>
         </ul>
-        <div class="price"><small>Valor</small><b>Em breve</b></div>
-        <a class="btn btn-dark" href="#lista" data-link="digital">Quero o 1º lote</a>
       </div>
-      <div class="tk vip reveal">
-        <span class="ribbon">Experiência completa</span>
-        <span class="type">Presencial · Lugares limitados</span>
-        <h3>Ingresso VIP</h3>
-        <p class="desc">Para quem quer viver o CONGERHI da primeira fila.</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Tudo do Passaporte Presencial</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Mesa próxima ao palco</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Acesso aos palestrantes do presencial</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Livro “O Segredo do Copo Cheio”, de Tati Souza, autografado</li>
-        </ul>
-        <div class="price"><small>Valor</small><b>Em breve</b></div>
-        <a class="btn btn-primary" href="#lista" data-link="vip">Quero ser VIP</a>
-      </div>
-      <div class="tk tk-pass reveal">
+      <div class="pass-buy">
         <span class="ribbon">Inscrições abertas</span>
-        <span class="type">Presencial · 2 dias</span>
-        <h3>Passaporte Presencial</h3>
-        <p class="desc">Os dois dias de palco em Bauru, com tudo o que acontece ao vivo.</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>19 e 20/03, das 9h às 19h</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Os 4 atos do Palco</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Networking com o RH do interior</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Cerimônia do Prêmio Ser Gente</li>
-        </ul>
-        <div class="price"><small data-lote-nome-up>1º lote · até 30/12</small><b data-lote-preco>R$ 397</b><span class="next" data-lote-prox>Depois sobe para R$ 497</span></div>
+        <small data-lote-nome-up>1º lote · até 30/12</small>
+        <b class="pass-price" data-lote-preco>R$ 397</b>
+        <span class="next" data-lote-prox>Depois sobe para R$ 497</span>
         <a class="btn btn-primary" href="#" data-link="presencial">Garantir meu passaporte</a>
+        <p class="pay">Atendimento direto pelo WhatsApp · Pix, boleto ou cartão</p>
       </div>
     </div>
     <div class="lotes reveal" id="lotes">
@@ -883,7 +872,7 @@ footer .copy{width:100%;border-top:1px solid rgba(255,255,255,.08);padding-top:2
     <div class="faq reveal">
       <details><summary>Quando e onde acontece o CONGERHI 2027?</summary><p>Nos dias 19 e 20 de março de 2027, das 9h às 19h, no Alameda Rodoserv Center, em Bauru/SP.</p></details>
       <details><summary>O que é a trilha digital (Bastidores)?</summary><p>São conteúdos gravados em cinco pilares (Roteiro, Ensaio, Iluminação, Figurino e Performance), disponíveis a partir de janeiro de 2027 por 12 meses, com certificação reconhecida pelo MEC.</p></details>
-      <details><summary>Qual a diferença entre o Passaporte Presencial e o Ingresso VIP?</summary><p>O Passaporte dá acesso aos dois dias de congresso, aos quatro atos, ao networking e ao Prêmio Ser Gente. O VIP inclui tudo isso, além de mesa próxima ao palco, acesso aos palestrantes do presencial e o livro “O Segredo do Copo Cheio”, de Tati Souza, autografado.</p></details>
+      <details><summary>O que está incluso no passaporte?</summary><p>Tudo: os dois dias presenciais em Bauru (19 e 20/03, das 9h às 19h), os quatro atos do Palco, o networking, a cerimônia do Prêmio Ser Gente e a trilha digital com os cinco pilares, disponível por 12 meses, com certificado reconhecido pelo MEC.</p></details>
       <details><summary>Quanto custa o Passaporte Presencial?</summary><p>1º lote: R$ 397 até 30/12. 2º lote: R$ 497 até 30/01. 3º lote: R$ 597 até 28/02. 4º lote: R$ 697 a partir de 01/03. Quanto antes você garante, menos paga.</p></details>
       <details><summary>Quem são os palestrantes?</summary><p>O elenco de 2027 está sendo confirmado e será revelado nas próximas semanas. Já está confirmada a Tati Souza, CEO da Gente Mais, como apresentadora e host. Em 2026, passaram pelo palco nomes como Eugenio Mussak e Pedro Cortella.</p></details>
       <details><summary>Recebo certificado?</summary><p>Sim. O certificado geral, reconhecido pelo MEC, é emitido depois que você consome os conteúdos das trilhas digitais e participa do presencial.</p></details>
@@ -932,8 +921,6 @@ const CONFIG = {
   dataEvento: "2027-03-19T09:00:00-03:00",
   links: {
     presencial: "",   // link de pagamento Asaas do Passaporte (vazio = WhatsApp com o lote atual)
-    vip: "",          // checkout do Ingresso VIP
-    digital: "",      // checkout das Trilhas Digitais
     premio: "",       // formulário de indicação do Prêmio Ser Gente
     patrocinio: "https://wa.me/5514996658272?text=Ol%C3%A1!%20Quero%20receber%20o%20m%C3%ADdia%20kit%20de%20patroc%C3%ADnio%20do%20CONGERHI%202027",
     whatsapp: "https://wa.me/5514996658272?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20CONGERHI%202027",
