@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CONGERHI 2027 · Sem Máscaras: dos bastidores ao palco · 19 e 20 de março · Bauru/SP</title>
+<meta name="description" content="O maior congresso de gestão de pessoas do interior de São Paulo. 12ª edição, 19 e 20 de março de 2027, no Alameda Rodoserv Center, em Bauru. Trilha digital de 12 meses com certificação reconhecida pelo MEC.">
+<meta property="og:title" content="CONGERHI 2027 · Sem Máscaras">
+<meta property="og:description" content="Dois dias em Bauru onde a máscara cai. 12ª edição do Congresso de Gestão e Recursos Humanos do Interior.">
+<meta property="og:image" content="assets/palco.jpg">
+<meta name="theme-color" content="#00122a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --petroleo:#002F4E;   /* cor principal */
+  --profundo:#00004C;   /* fundos institucionais */
+  --noite:#00122a;      /* fundo escuro do site */
+  --noite-2:#031d3d;
+  --cinza:#939393;
+  --branco:#FFFFFF;
+  --gelo:#F4F6F9;
+  --azul-luz:#4FB3FF;   /* destaque luminoso das peças */
+  --azul-claro:#BFE3FF;
+  --texto:#1b2433;
+  --raio:22px;
+  --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Montserrat,system-ui,sans-serif;color:var(--texto);background:var(--branco);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.display{font-family:"Chakra Petch",Montserrat,sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:1.02}
+.eyebrow{font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600;display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.eyebrow::after{content:"";width:64px;height:1px;background:currentColor;opacity:.6}
+.luz{color:var(--azul-luz)}
+.sec{padding:110px 0;position:relative;overflow:hidden}
+.dark{background:radial-gradient(1200px 600px at 85% -10%,#0a3b78 0%,transparent 60%),linear-gradient(180deg,var(--noite) 0%,var(--noite-2) 100%);color:#dfe8f3}
+.dark h2,.dark h3{color:#fff}
+.light{background:var(--gelo)}
+h2.title{font-size:clamp(2rem,4.6vw,3.6rem);font-weight:800;line-height:1.05;letter-spacing:-.01em;color:var(--profundo);margin-bottom:22px}
+h2.title em{font-style:normal;color:var(--petroleo)}
+.dark h2.title em{color:var(--azul-luz)}
+.lead{font-size:1.15rem;max-width:720px;font-weight:400}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:18px 30px;border-radius:999px;font-weight:700;font-size:.95rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer;border:0}
+.btn svg{width:18px;height:18px}
+.btn-primary{background:linear-gradient(90deg,#2f9bff,#4fb3ff);color:#001a33;box-shadow:0 10px 40px -10px rgba(79,179,255,.75)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 50px -10px rgba(79,179,255,.95)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.45);color:#fff;background:transparent}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.btn-dark{background:var(--profundo);color:#fff}
+.btn-dark:hover{background:var(--petroleo);transform:translateY(-2px)}
+
+/* ---------- topo ---------- */
+.topbar{background:linear-gradient(90deg,#2f9bff,#4fb3ff);color:#001a33;text-align:center;font-size:.85rem;font-weight:600;padding:9px 16px}
+.topbar a{font-weight:800}
+header.nav{position:sticky;top:0;z-index:50;background:rgba(0,18,42,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:24px}
+header.nav img{height:40px;width:auto}
+header.nav nav{display:flex;gap:28px}
+header.nav nav a{color:#cfdcec;text-decoration:none;font-size:.86rem;font-weight:500}
+header.nav nav a:hover{color:#fff}
+header.nav .btn{padding:12px 22px;font-size:.8rem}
+@media(max-width:980px){header.nav nav{display:none}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:calc(100vh - 110px);display:flex;align-items:center;background:var(--noite);color:#fff;overflow:hidden;padding:80px 0 120px}
+.hero-bg{position:absolute;inset:0 0 0 auto;width:52%;background:url(assets/palco.jpg) center/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 38%);mask-image:linear-gradient(90deg,transparent 0%,#000 38%);opacity:.9}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 500px at 15% 30%,rgba(10,70,150,.55),transparent 70%)}
+.hero .curve{position:absolute;border:1.5px solid rgba(120,190,255,.35);border-radius:180px 180px 0 0;pointer-events:none}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero .tag{display:inline-flex;gap:10px;align-items:center;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:8px 18px;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:28px;background:rgba(255,255,255,.04)}
+.hero .tag b{color:var(--azul-luz)}
+.hero h1{font-size:clamp(3rem,8.4vw,7rem);font-weight:700;max-width:820px}
+.hero h1 span{display:block;background:linear-gradient(90deg,#fff 0%,#9fd3ff 60%,#4fb3ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{font-size:clamp(1.1rem,2vw,1.4rem);max-width:620px;margin:26px 0 12px;color:#d7e4f3}
+.hero .meta{display:flex;flex-wrap:wrap;gap:12px 28px;margin:28px 0 40px;font-weight:600}
+.hero .meta div{display:flex;gap:10px;align-items:center}
+.hero .meta svg{width:20px;height:20px;color:var(--azul-luz)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:16px}
+.countdown{display:flex;gap:12px;margin-top:48px}
+.countdown div{min-width:84px;padding:14px 10px;text-align:center;border:1px solid rgba(255,255,255,.15);border-radius:16px;background:rgba(255,255,255,.04)}
+.countdown b{display:block;font-family:"Chakra Petch";font-size:2rem;line-height:1}
+.countdown small{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:#9fb6cf}
+.countdown-label{margin-top:40px;font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;color:#9fb6cf}
+.countdown-label+.countdown{margin-top:12px}
+@media(max-width:860px){.hero-bg{width:100%;opacity:.28;-webkit-mask-image:none;mask-image:none}}
+@media(max-width:520px){.hero .tag{font-size:.64rem;letter-spacing:.12em;border-radius:14px;display:block}.countdown{gap:8px}.countdown div{min-width:0;flex:1}.countdown b{font-size:1.6rem}.hero .btn{width:100%;justify-content:center}}
+
+/* ---------- números ---------- */
+.proof{background:var(--profundo);color:#fff;padding:0}
+.proof .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.proof .item{padding:44px 20px;text-align:center;border-left:1px solid rgba(255,255,255,.1)}
+.proof .item:first-child{border-left:0}
+.proof b{font-family:"Chakra Petch";font-size:clamp(2.2rem,4vw,3.4rem);display:block;line-height:1;color:#fff}
+.proof span{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:#a9c3e0}
+@media(max-width:760px){.proof .wrap{grid-template-columns:1fr 1fr}.proof .item:nth-child(3){border-left:0}.proof .item{border-top:1px solid rgba(255,255,255,.1)}}
+
+/* ---------- dor / por que agora ---------- */
+.why-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+.pains{display:grid;gap:14px}
+.pain{display:flex;gap:16px;align-items:flex-start;background:#fff;border-radius:18px;padding:20px 22px;box-shadow:0 1px 0 rgba(0,0,76,.06),0 20px 40px -30px rgba(0,0,76,.35);border:1px solid #e6ebf2}
+.pain i{flex:0 0 34px;height:34px;border-radius:50%;background:var(--profundo);color:#fff;display:grid;place-items:center;font-style:normal;font-weight:800;font-size:.85rem}
+.pain p{font-size:1rem;color:#2a3546}
+.pain strong{color:var(--profundo)}
+.quote-band{margin-top:28px;padding:22px 26px;border-left:4px solid var(--azul-luz);background:#fff;border-radius:0 16px 16px 0;font-weight:600;color:var(--profundo)}
+@media(max-width:900px){.why-grid{grid-template-columns:1fr;gap:40px}}
+
+/* ---------- tema ---------- */
+.tema-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+.tema-img{border-radius:var(--raio);overflow:hidden;position:relative;aspect-ratio:3/4;border:1px solid rgba(120,190,255,.25)}
+.tema-img img{width:100%;height:100%;object-fit:cover}
+.tema p{margin-bottom:18px;font-size:1.08rem}
+.tema blockquote{font-family:"Chakra Petch";text-transform:uppercase;font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.15;color:#fff;margin:34px 0 0;padding-top:26px;border-top:1px solid rgba(255,255,255,.15)}
+.tema blockquote span{color:var(--azul-luz)}
+@media(max-width:900px){.tema-grid{grid-template-columns:1fr}.tema-img{aspect-ratio:16/10}}
+
+/* ---------- jornada (bastidores + palco) ---------- */
+.journey{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:50px}
+.jcard{border-radius:var(--raio);padding:42px;position:relative;overflow:hidden}
+.jcard.back{background:#fff;border:1px solid #e3e9f1}
+.jcard.stage{background:linear-gradient(140deg,var(--profundo),#06306a);color:#dbe8f6}
+.jcard .pill{display:inline-block;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;padding:7px 14px;border-radius:999px;margin-bottom:22px}
+.jcard.back .pill{background:#e7f1fb;color:var(--petroleo)}
+.jcard.stage .pill{background:rgba(79,179,255,.18);color:var(--azul-claro)}
+.jcard h3{font-family:"Chakra Petch";text-transform:uppercase;font-size:2.4rem;line-height:1;margin-bottom:6px;color:var(--profundo)}
+.jcard.stage h3{color:#fff}
+.jcard .kicker{font-weight:600;margin-bottom:18px;color:var(--petroleo)}
+.jcard.stage .kicker{color:var(--azul-luz)}
+.jcard ul{list-style:none;margin-top:22px;display:grid;gap:10px}
+.jcard li{display:flex;gap:12px;align-items:flex-start}
+.jcard li::before{content:"";flex:0 0 18px;height:18px;margin-top:4px;border-radius:50%;background:radial-gradient(circle,var(--azul-luz) 35%,transparent 40%),rgba(79,179,255,.18)}
+.arrow-join{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:var(--azul-luz);display:grid;place-items:center;color:#001a33;z-index:3;box-shadow:0 0 0 8px var(--gelo)}
+.journey-wrap{position:relative}
+@media(max-width:860px){.journey{grid-template-columns:1fr}.arrow-join{display:none}}
+
+/* ---------- 4 atos ---------- */
+.atos{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:54px}
+.ato{border:1px solid rgba(120,190,255,.22);border-radius:var(--raio);padding:30px 26px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.01));position:relative;transition:transform .25s,border-color .25s}
+.ato:hover{transform:translateY(-6px);border-color:rgba(120,190,255,.6)}
+.ato .when{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:#8fb0d3;font-weight:600}
+.ato .num{font-family:"Chakra Petch";font-size:1rem;color:var(--azul-luz);margin:18px 0 2px;letter-spacing:.2em}
+.ato h3{font-family:"Chakra Petch";text-transform:uppercase;font-size:2rem;line-height:1;margin-bottom:14px}
+.ato p{font-size:.94rem;color:#c7d6e8}
+.ato.hot{border-color:var(--azul-luz);box-shadow:0 0 60px -20px rgba(79,179,255,.6)}
+.ato.hot .badge{position:absolute;top:-12px;right:20px;background:var(--azul-luz);color:#001a33;font-size:.65rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
+.horario{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px 30px;color:#a9c3e0;font-size:.92rem}
+.horario b{color:#fff}
+@media(max-width:980px){.atos{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.atos{grid-template-columns:1fr}}
+
+/* ---------- pilares ---------- */
+.pilares{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:50px}
+.pilar{background:#fff;border:1px solid #e3e9f1;border-radius:20px;padding:26px 22px;display:flex;flex-direction:column}
+.pilar .n{font-family:"Chakra Petch";color:var(--azul-luz);font-weight:700;letter-spacing:.2em;font-size:.85rem}
+.pilar h3{font-family:"Chakra Petch";text-transform:uppercase;font-size:1.55rem;color:var(--profundo);line-height:1.05;margin:8px 0 2px}
+.pilar .area{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cinza);font-weight:700;margin-bottom:14px}
+.pilar p{font-size:.88rem;color:#3c4858;margin-bottom:14px}
+.pilar ul{list-style:none;border-top:1px solid #edf1f6;padding-top:12px;margin-top:auto}
+.pilar li{font-size:.82rem;padding:4px 0;color:#1f2b3c}
+.pilar li::before{content:"→ ";color:var(--azul-luz);font-weight:700}
+.mec{display:flex;gap:18px;align-items:center;margin-top:34px;background:var(--profundo);color:#fff;padding:22px 28px;border-radius:18px}
+.mec b{font-family:"Chakra Petch";font-size:1.6rem;color:var(--azul-luz)}
+@media(max-width:1080px){.pilares{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.pilares{grid-template-columns:1fr}}
+
+/* ---------- host ---------- */
+.host-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:center}
+.host-photo{position:relative}
+.host-photo .frame{border-radius:240px 240px 26px 26px;overflow:hidden;aspect-ratio:4/5;border:2px solid rgba(120,190,255,.45);box-shadow:0 40px 80px -30px rgba(0,0,0,.7)}
+.host-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.host-photo .chip{position:absolute;left:-14px;bottom:36px;background:var(--azul-luz);color:#001a33;font-weight:800;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;padding:10px 16px;border-radius:12px}
+.host h3{font-family:"Chakra Petch";text-transform:uppercase;font-size:clamp(2.6rem,5vw,4.2rem);line-height:.95;color:#fff;margin-bottom:10px}
+.host h3 span{color:var(--azul-luz)}
+.host .role{font-size:.85rem;letter-spacing:.18em;text-transform:uppercase;color:#a9c3e0;font-weight:600;margin-bottom:26px}
+.host p{margin-bottom:16px;font-size:1.06rem}
+.host .sign{font-family:"Chakra Petch";text-transform:uppercase;font-size:1.3rem;color:#fff;margin-top:24px}
+.book{display:flex;gap:16px;align-items:center;margin-top:26px;padding:18px 22px;border:1px solid rgba(255,255,255,.15);border-radius:16px;background:rgba(255,255,255,.03)}
+.book .ico{width:46px;height:46px;border-radius:12px;background:rgba(79,179,255,.15);display:grid;place-items:center;color:var(--azul-luz);flex:0 0 46px}
+@media(max-width:900px){.host-grid{grid-template-columns:1fr}.host-photo{max-width:420px;margin:0 auto}}
+
+/* ---------- palestrantes ---------- */
+.speakers{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:50px}
+.spk{aspect-ratio:3/4;border-radius:20px;position:relative;overflow:hidden;background:linear-gradient(160deg,#0b2a55,#00004C);display:flex;flex-direction:column;justify-content:flex-end;padding:22px;color:#fff}
+.spk::before{content:"?";position:absolute;inset:0;display:grid;place-items:center;font-family:"Chakra Petch";font-size:9rem;color:rgba(255,255,255,.06)}
+.spk .silh{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:58%;opacity:.18;filter:blur(1px)}
+.spk small{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--azul-luz);font-weight:700}
+.spk b{font-family:"Chakra Petch";text-transform:uppercase;font-size:1.25rem;line-height:1.05;display:block;margin-top:6px}
+.spk .act{font-size:.8rem;color:#a9c3e0;margin-top:4px}
+.notify{margin-top:36px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;background:#fff;border:1px dashed #b9cde3;border-radius:18px;padding:24px 28px}
+.notify p{font-weight:600;color:var(--profundo)}
+@media(max-width:900px){.speakers{grid-template-columns:1fr 1fr}}
+
+/* ---------- público ---------- */
+.forwho{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
+.fw{background:#fff;border:1px solid #e3e9f1;border-radius:20px;padding:30px}
+.fw h3{color:var(--profundo);font-size:1.15rem;margin:14px 0 8px}
+.fw .ic{width:52px;height:52px;border-radius:50%;border:1.5px solid var(--petroleo);display:grid;place-items:center;color:var(--petroleo)}
+.fw p{font-size:.95rem;color:#3c4858}
+@media(max-width:860px){.forwho{grid-template-columns:1fr}}
+
+/* ---------- prêmio ---------- */
+.premio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
+.cat{border:1px solid rgba(120,190,255,.22);border-radius:20px;padding:30px;background:rgba(255,255,255,.03)}
+.cat h3{font-size:1.15rem;margin-bottom:10px}
+.cat p{font-size:.93rem;color:#c3d3e6}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.step{display:flex;gap:16px;align-items:flex-start}
+.step b{font-family:"Chakra Petch";font-size:2rem;color:var(--azul-luz);line-height:1}
+.step p{font-size:.93rem}
+@media(max-width:860px){.premio-grid,.steps{grid-template-columns:1fr}}
+
+/* ---------- ingressos ---------- */
+.tickets{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:54px;align-items:stretch}
+.tk{background:#fff;border:1px solid #e3e9f1;border-radius:26px;padding:36px 32px;display:flex;flex-direction:column;position:relative}
+.tk .type{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--cinza)}
+.tk h3{font-family:"Chakra Petch";text-transform:uppercase;font-size:2rem;line-height:1;color:var(--profundo);margin:10px 0 12px}
+.tk .desc{font-size:.95rem;color:#3c4858;margin-bottom:22px}
+.tk ul{list-style:none;display:grid;gap:10px;margin-bottom:28px}
+.tk li{display:flex;gap:10px;font-size:.93rem;align-items:flex-start}
+.tk li svg{flex:0 0 18px;width:18px;height:18px;margin-top:3px;color:#1e8be6}
+.tk .price{margin-top:auto;padding-top:22px;border-top:1px solid #edf1f6;margin-bottom:18px}
+.tk .price small{display:block;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--cinza);font-weight:700}
+.tk .price b{font-family:"Chakra Petch";font-size:1.6rem;color:var(--profundo)}
+.tk .btn{justify-content:center}
+.tk.vip{background:linear-gradient(160deg,var(--profundo) 0%,#06306a 100%);color:#dbe8f6;border:0;transform:scale(1.03);box-shadow:0 40px 80px -30px rgba(0,0,76,.6)}
+.tk.vip h3{color:#fff}
+.tk.vip .type{color:var(--azul-luz)}
+.tk.vip .desc{color:#c7d6e8}
+.tk.vip li svg{color:var(--azul-luz)}
+.tk.vip .price{border-color:rgba(255,255,255,.12)}
+.tk.vip .price b{color:#fff}
+.tk .ribbon{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--azul-luz);color:#001a33;font-size:.7rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:7px 16px;border-radius:999px;white-space:nowrap}
+.guarantee{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.guarantee div{display:flex;gap:14px;align-items:center;font-size:.92rem;color:#2a3546}
+.guarantee svg{flex:0 0 28px;width:28px;height:28px;color:var(--petroleo)}
+@media(max-width:960px){.tickets{grid-template-columns:1fr}.tk.vip{transform:none}.guarantee{grid-template-columns:1fr}}
+
+/* ---------- empresas / patrocínio ---------- */
+.biz{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.biz .card{border-radius:var(--raio);padding:44px;position:relative;overflow:hidden}
+.biz .team{background:#fff;border:1px solid #e3e9f1}
+.biz .spons{background:linear-gradient(140deg,#00004C,#002F4E);color:#dbe8f6}
+.biz h3{font-family:"Chakra Petch";text-transform:uppercase;font-size:2rem;line-height:1.05;margin-bottom:14px;color:var(--profundo)}
+.biz .spons h3{color:#fff}
+.biz p{margin-bottom:22px}
+@media(max-width:860px){.biz{grid-template-columns:1fr}}
+
+/* ---------- local ---------- */
+.local-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+.local-info h3{font-family:"Chakra Petch";text-transform:uppercase;font-size:2.4rem;color:#fff;line-height:1;margin-bottom:10px}
+.local-info dl{display:grid;gap:18px;margin:28px 0 34px}
+.local-info dt{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:#8fb0d3;font-weight:700}
+.local-info dd{font-size:1.05rem;color:#fff;font-weight:500}
+.map{border-radius:var(--raio);overflow:hidden;border:1px solid rgba(120,190,255,.3);aspect-ratio:4/3;background:#0b2a55}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(.3) contrast(1.05)}
+@media(max-width:900px){.local-grid{grid-template-columns:1fr}}
+
+/* ---------- faq ---------- */
+.faq{max-width:860px;margin:46px auto 0}
+.faq details{border-bottom:1px solid #dbe3ee;padding:6px 0}
+.faq summary{list-style:none;cursor:pointer;padding:20px 44px 20px 0;font-weight:700;color:var(--profundo);font-size:1.06rem;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:1.6rem;font-weight:400;color:var(--petroleo);transition:transform .2s}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq details p{padding:0 0 22px;color:#3c4858}
+
+/* ---------- cta final ---------- */
+.final{text-align:center;background:radial-gradient(900px 500px at 50% 120%,#0b5fc4 0%,transparent 60%),var(--noite);color:#dbe8f6;padding:130px 0}
+.final h2{font-family:"Chakra Petch";text-transform:uppercase;font-size:clamp(2.6rem,7vw,5.6rem);line-height:.98;color:#fff;margin-bottom:24px}
+.final h2 span{color:var(--azul-luz)}
+.final p{max-width:640px;margin:0 auto 40px;font-size:1.15rem}
+
+/* ---------- lead form ---------- */
+.lead-form{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:12px;max-width:980px;margin:40px auto 0;text-align:left}
+.lead-form input,.lead-form select{width:100%;padding:17px 18px;border-radius:14px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff;font:inherit;font-size:.95rem}
+.lead-form input::placeholder{color:#9fb6cf}
+.lead-form select option{color:#000}
+.lead-form .ok{grid-column:1/-1;color:var(--azul-luz);font-weight:600;display:none}
+@media(max-width:860px){.lead-form{grid-template-columns:1fr}}
+
+footer{background:#000a1a;color:#8fa6bf;padding:60px 0 40px;font-size:.88rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:30px;align-items:center}
+footer img{height:44px;width:auto}
+footer a{text-decoration:none;color:#cfdcec}
+footer .copy{width:100%;border-top:1px solid rgba(255,255,255,.08);padding-top:24px;margin-top:10px;font-size:.78rem}
+
+/* ---------- barra fixa mobile ---------- */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(0,18,42,.95);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.1);padding:12px 16px;display:none;align-items:center;justify-content:space-between;gap:12px;color:#fff;transform:translateY(100%);transition:transform .3s}
+.sticky-cta.show{transform:none}
+.sticky-cta small{display:block;font-size:.68rem;color:#9fb6cf;letter-spacing:.12em;text-transform:uppercase}
+.sticky-cta b{font-size:.92rem}
+.sticky-cta .btn{padding:13px 18px;font-size:.75rem}
+@media(max-width:760px){.sticky-cta{display:flex}}
+
+/* ---------- animações ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- =====================================================================
+  CONFIGURAÇÃO RÁPIDA — troque estes links quando estiverem prontos
+  (estão também no <script> no final da página)
+====================================================================== -->
+
+<div class="topbar">🎟️ 12ª edição · 19 e 20 de março de 2027 · Bauru/SP — <a href="#ingressos">entre na lista do 1º lote</a></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#topo" aria-label="CONGERHI 2027 — início"><img src="assets/logo-white.png" alt="CONGERHI 2027 — Congresso de Gestão e Recursos Humanos do Interior"></a>
+    <nav aria-label="Navegação principal">
+      <a href="#tema">O tema</a>
+      <a href="#programacao">Programação</a>
+      <a href="#host">Host</a>
+      <a href="#palestrantes">Palestrantes</a>
+      <a href="#premio">Prêmio Ser Gente</a>
+      <a href="#local">Local</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+    <a class="btn btn-primary" href="#ingressos" data-cta>Quero participar</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="topo">
+  <div class="hero-bg" role="img" aria-label="Palco do CONGERHI com plateia"></div>
+  <div class="curve" style="width:420px;height:520px;left:-160px;bottom:-260px"></div>
+  <div class="curve" style="width:300px;height:380px;left:-120px;bottom:-240px;border-color:rgba(120,190,255,.2)"></div>
+  <div class="wrap">
+    <div class="tag"><b>12ª edição</b> · O maior congresso de gestão de pessoas do interior de SP</div>
+    <h1 class="display">Sem máscaras.<span>Dos bastidores ao palco.</span></h1>
+    <p class="sub">Por trás de todo cargo, todo título e toda liderança existe uma pessoa. São dois dias em Bauru para tirar a máscara, olhar para quem sustenta a sua empresa e voltar com um plano de verdade.</p>
+    <div class="meta">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>19 e 20 de março de 2027 · 9h às 19h</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Alameda Rodoserv Center · Bauru/SP</div>
+    </div>
+    <div class="ctas">
+      <a class="btn btn-primary" href="#ingressos" data-cta>Garantir meu passaporte
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-ghost" href="#programacao">Ver a programação</a>
+    </div>
+    <p class="countdown-label">Faltam para a cortina abrir</p>
+    <div class="countdown" id="countdown" aria-live="polite">
+      <div><b data-d>--</b><small>dias</small></div>
+      <div><b data-h>--</b><small>horas</small></div>
+      <div><b data-m>--</b><small>min</small></div>
+      <div><b data-s>--</b><small>seg</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NÚMEROS ================= -->
+<section class="proof" aria-label="CONGERHI em números">
+  <div class="wrap">
+    <div class="item"><b>12ª</b><span>edição consecutiva</span></div>
+    <div class="item"><b>+100</b><span>experts renomados</span></div>
+    <div class="item"><b>1.200</b><span>participantes em 2026</span></div>
+    <div class="item"><b>MEC</b><span>certificação reconhecida</span></div>
+  </div>
+</section>
+
+<!-- ================= POR QUE AGORA ================= -->
+<section class="sec light" id="por-que">
+  <div class="wrap why-grid">
+    <div class="reveal">
+      <div class="eyebrow" style="color:var(--petroleo)">Por que esse tema, agora</div>
+      <h2 class="title">O RH nunca teve tanta pressão <em>para mudar rápido.</em></h2>
+      <p class="lead">A Inteligência Artificial está reconfigurando as competências do mercado. A nova NR-1 colocou os riscos psicossociais no centro da gestão de pessoas. E, no meio disso tudo, quem cuida de todo mundo raramente tem tempo de cuidar de si.</p>
+      <div class="quote-band">O CONGERHI 2027 propõe uma pausa: antes de acelerar ainda mais, olhar para quem está por trás de cada decisão, cada liderança, cada time.</div>
+    </div>
+    <div class="pains reveal">
+      <div class="pain"><i>01</i><p>Você precisa <strong>ter resposta para tudo</strong>, mesmo quando a pergunta ainda nem existe.</p></div>
+      <div class="pain"><i>02</i><p>Você precisa <strong>parecer bem</strong> para a equipe, mesmo nos dias em que não está.</p></div>
+      <div class="pain"><i>03</i><p>A <strong>NR-1</strong> transformou saúde mental e segurança psicológica em exigência legal, e não só em discurso.</p></div>
+      <div class="pain"><i>04</i><p>A <strong>IA chegou ao RH</strong> e você quer usá-la para liberar tempo para gente, e não para substituir gente.</p></div>
+      <div class="pain"><i>05</i><p>Você quer voltar para a empresa com <strong>ferramentas práticas</strong>, e não só com inspiração que acaba na segunda-feira.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TEMA ================= -->
+<section class="sec dark tema" id="tema">
+  <div class="wrap tema-grid">
+    <div class="tema-img reveal"><img src="assets/bastidores-rh.jpg" alt="Elemento gráfico RH sobre auditório iluminado em azul" loading="lazy"></div>
+    <div class="reveal">
+      <div class="eyebrow luz">O tema da 12ª edição</div>
+      <h2 class="title" style="color:#fff">Todo mundo usa uma máscara. <em>A pergunta é: qual você está vestindo?</em></h2>
+      <p>No RH e na liderança, às vezes são várias ao mesmo tempo: a de quem tem resposta pra tudo, a de quem está bem mesmo quando não está, a de quem precisa parecer forte pela equipe inteira, mesmo sendo, antes de tudo, gente.</p>
+      <p>Nem toda máscara é um problema. Algumas protegem, outras cuidam. O risco está em perder de vista qual delas estamos vestindo e deixar que a máscara vire a nossa cara.</p>
+      <blockquote>Por trás de todo cargo existe uma pessoa. <span>E é ela que sustenta empresas de verdade.</span></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ================= JORNADA ================= -->
+<section class="sec light" id="jornada">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center;max-width:820px;margin:0 auto">
+      <div class="eyebrow" style="color:var(--petroleo);justify-content:center">Uma jornada de 12 meses</div>
+      <h2 class="title">Nenhum grande espetáculo nasce <em>só no palco.</em></h2>
+      <p class="lead" style="margin:0 auto">Você se prepara nos bastidores, com uma trilha digital de 12 meses, e vive a virada no palco: dois dias presenciais em Bauru. Assim, o congresso não termina quando as luzes apagam.</p>
+    </div>
+    <div class="journey-wrap">
+      <div class="journey">
+        <div class="jcard back reveal">
+          <span class="pill">Bastidores · Trilha digital</span>
+          <h3>Onde você se prepara</h3>
+          <p class="kicker">A partir de janeiro de 2027 · 12 meses de acesso</p>
+          <p>Conteúdo técnico e prático em cinco pilares, com nomes renomados da gestão de pessoas. É uma ferramenta para usar no dia a dia de RH e liderança, e não um bônus esquecido depois da inscrição.</p>
+          <ul>
+            <li>5 pilares: Roteiro, Ensaio, Iluminação, Figurino e Performance</li>
+            <li>Cada pilar fala com o RH e com a liderança</li>
+            <li>Certificação reconhecida pelo MEC</li>
+          </ul>
+        </div>
+        <div class="arrow-join" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="jcard stage reveal">
+          <span class="pill">Palco · 2 dias presenciais</span>
+          <h3>Onde a máscara cai</h3>
+          <p class="kicker">19 e 20 de março de 2027 · Bauru/SP</p>
+          <p>Inspiração, provocação e conexão ao vivo. É o momento em que tudo o que foi estudado nos bastidores vira experiência real, compartilhada com centenas de profissionais de RH e líderes do interior.</p>
+          <ul>
+            <li>4 atos, um por período</li>
+            <li>Networking com o RH das médias e grandes empresas do interior</li>
+            <li>Cerimônia do Prêmio Ser Gente</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROGRAMAÇÃO / 4 ATOS ================= -->
+<section class="sec dark" id="programacao">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow luz">Palco · Programação</div>
+      <h2 class="title" style="color:#fff">Dois dias. <em>Quatro atos.</em></h2>
+      <p class="lead">Um roteiro pensado como uma peça: do cenário em que você atua até a essência que você leva de volta para a empresa.</p>
+    </div>
+    <div class="atos">
+      <article class="ato reveal">
+        <div class="when">Dia 1 · Manhã</div>
+        <div class="num">ATO I</div>
+        <h3>Cenário</h3>
+        <p>Economia, tecnologia e mercado de trabalho: o contexto em que RH e liderança atuam hoje. Uma visão ampla, com um especialista em análise de cenário, para mostrar em que palco estamos pisando.</p>
+      </article>
+      <article class="ato reveal">
+        <div class="when">Dia 1 · Tarde</div>
+        <div class="num">ATO II</div>
+        <h3>Papéis</h3>
+        <p>Mediador, estrategista, cuidador. Os vários chapéus que RH e liderança vestem nesse cenário, e como reconhecer essa multiplicidade sem se perder nela.</p>
+      </article>
+      <article class="ato hot reveal">
+        <span class="badge">O mais intenso</span>
+        <div class="when">Dia 2 · Manhã</div>
+        <div class="num">ATO III</div>
+        <h3>Máscaras</h3>
+        <p>O que a gente veste para dar conta, e o que isso custa. Saúde mental, segurança psicológica, NR-1, risco e peso. Uma manhã inteira para o momento mais denso e confrontador.</p>
+      </article>
+      <article class="ato reveal">
+        <div class="when">Dia 2 · Tarde</div>
+        <div class="num">ATO IV</div>
+        <h3>Essência</h3>
+        <p>O que sobra quando a máscara cai. Propósito e cultura genuína para levar de volta à empresa, porque ninguém é autêntico o tempo todo, e nem todo papel é falso.</p>
+      </article>
+    </div>
+    <div class="horario reveal">
+      <span><b>19/03 (sex)</b> · 9h às 19h</span>
+      <span><b>20/03 (sáb)</b> · 9h às 19h</span>
+      <span>Horários detalhados e nomes dos palestrantes serão divulgados em breve.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5 PILARES ================= -->
+<section class="sec light" id="pilares">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow" style="color:var(--petroleo)">Bastidores · Trilha digital</div>
+      <h2 class="title">Os 5 pilares que <em>preparam você</em> antes de qualquer palco.</h2>
+      <p class="lead">Conteúdo em linguagem de negócio, para RH e liderança, disponível por 12 meses a partir de janeiro de 2027.</p>
+    </div>
+    <div class="pilares">
+      <div class="pilar reveal"><span class="n">01</span><h3>Roteiro</h3><span class="area">Planejamento</span><p>O planejamento por trás de toda decisão: estratégia que vira processo, indicador e direção clara para o time.</p>
+        <ul><li>Estratégia de RH</li><li>People analytics</li><li>Governança e compliance</li><li>Cargos, salários e benefícios</li><li>Sucessão e carreira</li></ul></div>
+      <div class="pilar reveal"><span class="n">02</span><h3>Ensaio</h3><span class="area">Autoconhecimento</span><p>O treino de olhar para dentro antes de agir para fora. A base de toda decisão e de todo exemplo.</p>
+        <ul><li>Inteligência emocional</li><li>Desenvolvimento de líderes</li><li>Comunicação e influência</li><li>Saúde mental e resiliência</li><li>Carreira e propósito</li></ul></div>
+      <div class="pilar reveal"><span class="n">03</span><h3>Iluminação</h3><span class="area">Tecnologia</span><p>A tecnologia que ilumina decisões e libera tempo para a conexão humana.</p>
+        <ul><li>IA no RH</li><li>Automação de processos</li><li>HR techs e ferramentas</li><li>Dados e decisão</li><li>Ética e governança de IA</li></ul></div>
+      <div class="pilar reveal"><span class="n">04</span><h3>Figurino</h3><span class="area">Cultura e marca</span><p>A imagem que se veste e se sustenta todos os dias: ser, na prática, o que a marca promete.</p>
+        <ul><li>Cultura organizacional</li><li>Employer branding</li><li>Comunicação interna</li><li>Diversidade e inclusão</li><li>Experiência do colaborador</li></ul></div>
+      <div class="pilar reveal"><span class="n">05</span><h3>Performance</h3><span class="area">Resultado</span><p>A hora de entrar em cena: o preparo vira resultado, com feedback e indicadores.</p>
+        <ul><li>Gestão de desempenho</li><li>Feedback e conversas difíceis</li><li>Metas e indicadores</li><li>Engajamento</li><li>Reconhecimento e remuneração</li></ul></div>
+    </div>
+    <div class="mec reveal"><b>MEC</b><span>Trilhas digitais com <strong>certificação reconhecida pelo MEC</strong>: o seu desenvolvimento vira currículo.</span></div>
+  </div>
+</section>
+
+<!-- ================= HOST ================= -->
+<section class="sec dark host" id="host">
+  <div class="wrap host-grid">
+    <div class="host-photo reveal">
+      <div class="frame"><img src="assets/tati-souza.jpg" alt="Tati Souza, apresentadora e host do CONGERHI 2027"></div>
+      <span class="chip">Apresentadora &amp; Host</span>
+    </div>
+    <div class="reveal">
+      <div class="eyebrow luz">Quem conduz o palco</div>
+      <h3>Tati <span>Souza</span></h3>
+      <p class="role">CEO da Gente Mais · Especialista em desenvolvimento humano</p>
+      <p>Tati é a voz que conduz os quatro atos do CONGERHI 2027 e costura cada palestra, cada painel e cada provocação em uma única experiência.</p>
+      <p>À frente da Gente Mais, ela dedica a carreira ao desenvolvimento de pessoas e lideranças. No palco, fala sobre o que a gente aprende nos bastidores: comportamento humano, conexão e relações que fazem a gestão acontecer de verdade.</p>
+      <div class="book">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14z"/><path d="M6.5 17A2.5 2.5 0 0 0 4 19.5 2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></div>
+        <div><b style="color:#fff">“O Segredo do Copo Cheio”</b><br><span style="font-size:.9rem">Livro da Tati, que vai autografado para quem garantir o Ingresso VIP.</span></div>
+      </div>
+      <p class="sign">Bora fazer valer a pena.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PALESTRANTES ================= -->
+<section class="sec light" id="palestrantes">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow" style="color:var(--petroleo)">Palestrantes</div>
+      <h2 class="title">+100 experts já passaram por aqui. <em>Os de 2027 estão chegando.</em></h2>
+      <p class="lead">Estamos fechando o elenco dos quatro atos. Os nomes serão revelados um a um, e quem está na lista fica sabendo antes de todo mundo.</p>
+    </div>
+    <div class="speakers">
+      <div class="spk reveal"><small>Ato I · Cenário</small><b>Em breve</b><span class="act">Especialista em análise de cenário</span></div>
+      <div class="spk reveal"><small>Ato II · Papéis</small><b>Em breve</b><span class="act">Revelação em breve</span></div>
+      <div class="spk reveal"><small>Ato III · Máscaras</small><b>Em breve</b><span class="act">Revelação em breve</span></div>
+      <div class="spk reveal"><small>Ato IV · Essência</small><b>Em breve</b><span class="act">Revelação em breve</span></div>
+    </div>
+    <div class="notify reveal">
+      <p>🔔 Quer saber primeiro quem sobe ao palco?</p>
+      <a class="btn btn-dark" href="#lista">Entrar na lista</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PARA QUEM ================= -->
+<section class="sec" id="para-quem" style="background:#fff">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center;max-width:780px;margin:0 auto">
+      <div class="eyebrow" style="color:var(--petroleo);justify-content:center">Para quem é</div>
+      <h2 class="title">Feito para quem cuida de gente <em>e precisa de resultado.</em></h2>
+    </div>
+    <div class="forwho">
+      <div class="fw reveal"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20c.6-3.6 3.3-5.5 6.5-5.5s5.9 1.9 6.5 5.5M15 14.6c2.8-.4 5.6 1.1 6.5 4.4"/></svg></div>
+        <h3>Profissionais de RH</h3><p>Analistas, business partners, coordenadores e gestores que querem dominar NR-1, IA, cultura e indicadores, com ferramentas para usar já na semana seguinte.</p></div>
+      <div class="fw reveal"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20h18M6 16V9M11 16V5M16 16v-6M21 16V7"/></svg></div>
+        <h3>Líderes e gestores</h3><p>Quem conduz times e quer liderar com mais clareza, menos peso e mais verdade. Cada pilar da trilha fala diretamente com a liderança.</p></div>
+      <div class="fw reveal"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+        <h3>Empresários e diretores</h3><p>Donos e diretores de médias e grandes empresas do interior que entendem que a cultura é o que sustenta o resultado.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRÊMIO ================= -->
+<section class="sec dark" id="premio">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow luz">Reconhecimento</div>
+      <h2 class="title" style="color:#fff">Prêmio <em>Ser Gente</em></h2>
+      <p class="lead">Reconhecemos os protagonistas das melhores práticas humanas e inovadoras do Estado de São Paulo, porque mobilizar-se em prol das pessoas é contribuir para um mundo melhor.</p>
+    </div>
+    <div class="premio-grid">
+      <div class="cat reveal"><h3>Profissional Referência em RH</h3><p>Quem contribui com a classe por meio de palestras, artigos e compartilhamento de conhecimento, e é lembrado pelo legado que deixa aos colegas.</p></div>
+      <div class="cat reveal"><h3>Práticas Inovadoras de RH</h3><p>Práticas que atendem de forma inovadora às necessidades dos colaboradores e contribuem para atrair, desenvolver ou reter talentos.</p></div>
+      <div class="cat reveal"><h3>Impacto na Sociedade</h3><p>Projetos sociais de empresas privadas que contribuem para o desenvolvimento humano e para a independência dos cidadãos.</p></div>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><b>01</b><p>Indicação <strong>sem nenhum custo</strong>, com inscrições abertas até janeiro.</p></div>
+      <div class="step"><b>02</b><p>Os finalistas se comprometem a adquirir 10 passaportes presenciais.</p></div>
+      <div class="step"><b>03</b><p>O reconhecimento acontece no palco do congresso presencial, em Bauru.</p></div>
+    </div>
+    <div style="margin-top:40px" class="reveal"><a class="btn btn-ghost" href="#" data-link="premio">Indicar um case ao Prêmio</a></div>
+  </div>
+</section>
+
+<!-- ================= INGRESSOS ================= -->
+<section class="sec light" id="ingressos">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center;max-width:820px;margin:0 auto">
+      <div class="eyebrow" style="color:var(--petroleo);justify-content:center">Ingressos</div>
+      <h2 class="title">Escolha <em>o seu lugar</em> nessa história.</h2>
+      <p class="lead" style="margin:0 auto">Os valores e lotes serão divulgados em breve. Quem entra na lista agora recebe o <strong>1º lote em primeira mão</strong>, com o menor preço do ano.</p>
+    </div>
+    <div class="tickets">
+      <div class="tk reveal">
+        <span class="type">Online · 12 meses</span>
+        <h3>Trilhas Digitais</h3>
+        <p class="desc">Os bastidores completos para estudar no seu ritmo, de onde estiver.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>5 pilares em conteúdo gravado</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Acesso a partir de janeiro de 2027</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Certificação reconhecida pelo MEC</li>
+        </ul>
+        <div class="price"><small>Valor</small><b>Em breve</b></div>
+        <a class="btn btn-dark" href="#lista" data-link="digital">Quero o 1º lote</a>
+      </div>
+      <div class="tk vip reveal">
+        <span class="ribbon">Experiência completa</span>
+        <span class="type">Presencial · Lugares limitados</span>
+        <h3>Ingresso VIP</h3>
+        <p class="desc">Para quem quer viver o CONGERHI da primeira fila.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Tudo do Passaporte Presencial</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Mesa próxima ao palco</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Acesso aos palestrantes do presencial</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Livro “O Segredo do Copo Cheio”, de Tati Souza, autografado</li>
+        </ul>
+        <div class="price"><small>Valor</small><b>Em breve</b></div>
+        <a class="btn btn-primary" href="#lista" data-link="vip">Quero ser VIP</a>
+      </div>
+      <div class="tk reveal">
+        <span class="type">Presencial · 2 dias</span>
+        <h3>Passaporte Presencial</h3>
+        <p class="desc">Os dois dias de palco em Bauru, com tudo o que acontece ao vivo.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>19 e 20/03, das 9h às 19h</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Os 4 atos do Palco</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Networking com o RH do interior</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Cerimônia do Prêmio Ser Gente</li>
+        </ul>
+        <div class="price"><small>Valor</small><b>Em breve</b></div>
+        <a class="btn btn-dark" href="#lista" data-link="presencial">Quero o 1º lote</a>
+      </div>
+    </div>
+    <div class="guarantee reveal">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>1º lote enviado primeiro para quem está na lista</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5 7 21l5-3 5 3-1.5-8.5"/></svg>Certificado reconhecido pelo MEC</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg>12 anos de história com o RH do interior</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EMPRESAS / PATROCÍNIO ================= -->
+<section class="sec" id="empresas" style="background:#fff;padding-top:40px">
+  <div class="wrap biz">
+    <div class="card team reveal">
+      <div class="eyebrow" style="color:var(--petroleo)">Para empresas</div>
+      <h3>Leve o seu time para o palco</h3>
+      <p>Quando RH e liderança vivem a mesma experiência, a mudança volta junto para a empresa. Fale com a gente para montar a participação do seu time.</p>
+      <a class="btn btn-dark" href="#" data-link="whatsapp">Falar com a equipe</a>
+    </div>
+    <div class="card spons reveal">
+      <div class="eyebrow luz">Patrocínio e exposição</div>
+      <h3>Coloque sua marca perto de quem decide</h3>
+      <p>Cotas de patrocínio e estandes para marcas que querem estar perto do RH e das lideranças das médias e grandes empresas do interior paulista. Os espaços de exposição são limitados.</p>
+      <a class="btn btn-primary" href="#" data-link="patrocinio">Solicitar mídia kit</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LOCAL ================= -->
+<section class="sec dark" id="local">
+  <div class="wrap local-grid">
+    <div class="local-info reveal">
+      <div class="eyebrow luz">Local</div>
+      <h3>Alameda Rodoserv Center</h3>
+      <p>Bauru/SP, o coração do interior paulista.</p>
+      <dl>
+        <div><dt>Datas</dt><dd>19 e 20 de março de 2027</dd></div>
+        <div><dt>Horário</dt><dd>Das 9h às 19h, nos dois dias</dd></div>
+        <div><dt>Estrutura</dt><dd>Auditório com mesas, estandes de expositores, loja de livros e ambulatório</dd></div>
+      </dl>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Alameda+Rodoserv+Center+Bauru+SP" target="_blank" rel="noopener">Como chegar</a>
+    </div>
+    <div class="map reveal">
+      <iframe title="Mapa: Alameda Rodoserv Center, Bauru/SP" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Alameda+Rodoserv+Center+Bauru+SP&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="sec light" id="faq">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center">
+      <div class="eyebrow" style="color:var(--petroleo);justify-content:center">Dúvidas frequentes</div>
+      <h2 class="title">Antes de entrar em cena</h2>
+    </div>
+    <div class="faq reveal">
+      <details><summary>Quando e onde acontece o CONGERHI 2027?</summary><p>Nos dias 19 e 20 de março de 2027, das 9h às 19h, no Alameda Rodoserv Center, em Bauru/SP.</p></details>
+      <details><summary>O que é a trilha digital (Bastidores)?</summary><p>São conteúdos gravados em cinco pilares (Roteiro, Ensaio, Iluminação, Figurino e Performance), disponíveis a partir de janeiro de 2027 por 12 meses, com certificação reconhecida pelo MEC.</p></details>
+      <details><summary>Qual a diferença entre o Passaporte Presencial e o Ingresso VIP?</summary><p>O Passaporte dá acesso aos dois dias de congresso, aos quatro atos, ao networking e ao Prêmio Ser Gente. O VIP inclui tudo isso, além de mesa próxima ao palco, acesso aos palestrantes do presencial e o livro “O Segredo do Copo Cheio”, de Tati Souza, autografado.</p></details>
+      <details><summary>Quando os valores serão divulgados?</summary><p>Em breve. Entre na lista para receber o 1º lote em primeira mão, antes da abertura geral.</p></details>
+      <details><summary>Quem são os palestrantes?</summary><p>O elenco está sendo confirmado e será revelado nas próximas semanas. A apresentação e a condução do palco são da Tati Souza, CEO da Gente Mais.</p></details>
+      <details><summary>Recebo certificado?</summary><p>Sim. As trilhas digitais têm certificação reconhecida pelo MEC.</p></details>
+      <details><summary>Minha empresa quer patrocinar ou expor. Como faço?</summary><p>Temos cotas de patrocínio e espaços de exposição. A proposta comercial é sob consulta: clique em “Solicitar mídia kit” na seção de patrocínio.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA FINAL + LISTA ================= -->
+<section class="final" id="lista">
+  <div class="wrap">
+    <div class="eyebrow luz" style="justify-content:center">Dos bastidores ao palco</div>
+    <h2>A cortina abre em março.<br><span>Venha sem máscaras.</span></h2>
+    <p>Entre na lista e receba antes de todo mundo o 1º lote, com o menor valor do ano, e a revelação dos palestrantes.</p>
+    <form class="lead-form" id="leadForm">
+      <input name="nome" type="text" placeholder="Seu nome" required autocomplete="name">
+      <input name="email" type="email" placeholder="Seu e-mail" required autocomplete="email">
+      <input name="whatsapp" type="tel" placeholder="WhatsApp (DDD)" required autocomplete="tel">
+      <button class="btn btn-primary" type="submit">Quero o 1º lote</button>
+      <p class="ok" id="leadOk">Pronto! Você está na lista. Vamos avisar assim que o 1º lote abrir. 💙</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/logo-white.png" alt="CONGERHI 2027">
+    <div>Realização <b style="color:#fff">Fabrika</b></div>
+    <div><a href="#" data-link="instagram">Instagram</a> · <a href="#" data-link="whatsapp">WhatsApp</a> · <a href="#" data-link="email">Contato</a></div>
+    <div class="copy">© 2027 CONGERHI · Congresso de Gestão e Recursos Humanos do Interior. Todos os direitos reservados.</div>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <div><small>19 e 20/03 · Bauru</small><b>1º lote em breve</b></div>
+  <a class="btn btn-primary" href="#lista">Entrar na lista</a>
+</div>
+
+<script>
+/* ============================================================
+   CONFIGURAÇÃO — preencha quando os links estiverem prontos.
+   Links vazios mantêm o comportamento padrão (rolar até a lista).
+============================================================ */
+const CONFIG = {
+  dataEvento: "2027-03-19T09:00:00-03:00",
+  links: {
+    presencial: "",   // checkout do Passaporte Presencial
+    vip: "",          // checkout do Ingresso VIP
+    digital: "",      // checkout das Trilhas Digitais
+    premio: "",       // formulário de indicação do Prêmio Ser Gente
+    patrocinio: "",   // formulário/WhatsApp comercial
+    whatsapp: "",     // ex.: https://wa.me/5514999999999
+    instagram: "",    // ex.: https://instagram.com/congerhi
+    email: ""         // ex.: mailto:contato@congerhi.com.br
+  },
+  // endpoint que recebe os leads (Google Apps Script, RD Station, n8n...). Vazio = só mostra a mensagem.
+  leadEndpoint: ""
+};
+
+// Aplica links configurados
+document.querySelectorAll("[data-link]").forEach(a => {
+  const url = CONFIG.links[a.dataset.link];
+  if (url) { a.href = url; if (/^https?:/.test(url)) { a.target = "_blank"; a.rel = "noopener"; } }
+  else if (a.getAttribute("href") === "#") { a.href = "#lista"; }
+});
+
+// Contagem regressiva
+(function(){
+  const end = new Date(CONFIG.dataEvento).getTime();
+  const el = document.getElementById("countdown");
+  const f = n => String(n).padStart(2,"0");
+  function tick(){
+    let d = Math.max(0, end - Date.now());
+    const days = Math.floor(d/864e5); d%=864e5;
+    const h = Math.floor(d/36e5); d%=36e5;
+    const m = Math.floor(d/6e4); const s = Math.floor((d%6e4)/1e3);
+    el.querySelector("[data-d]").textContent = days;
+    el.querySelector("[data-h]").textContent = f(h);
+    el.querySelector("[data-m]").textContent = f(m);
+    el.querySelector("[data-s]").textContent = f(s);
+  }
+  tick(); setInterval(tick,1000);
+})();
+
+// Revelar ao rolar
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} }), {threshold:.12});
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+// Barra fixa no mobile depois do hero
+const sticky = document.getElementById("stickyCta");
+const hero = document.getElementById("topo");
+new IntersectionObserver(([e]) => sticky.classList.toggle("show", !e.isIntersecting)).observe(hero);
+
+// Formulário de lista
+document.getElementById("leadForm").addEventListener("submit", async ev => {
+  ev.preventDefault();
+  const form = ev.target;
+  const data = Object.fromEntries(new FormData(form));
+  if (CONFIG.leadEndpoint) {
+    try { await fetch(CONFIG.leadEndpoint, {method:"POST", mode:"no-cors", headers:{"Content-Type":"application/json"}, body:JSON.stringify({...data, origem:"site-congerhi-2027"})}); } catch(e){}
+  }
+  form.querySelectorAll("input,button").forEach(i => i.disabled = true);
+  document.getElementById("leadOk").style.display = "block";
+});
+</script>
+</body>
+</html>
