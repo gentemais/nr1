@@ -11,7 +11,7 @@
 <meta name="theme-color" content="#00122a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
   --petroleo:#002F4E;   /* cor principal */
@@ -33,7 +33,7 @@ body{font-family:Montserrat,system-ui,sans-serif;color:var(--texto);background:v
 img{max-width:100%;display:block}
 a{color:inherit}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
-.display{font-family:"Chakra Petch",Montserrat,sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:1.02}
+.display{font-family:Montserrat,sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.01em;line-height:1.02}
 .eyebrow{font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600;display:flex;align-items:center;gap:14px;margin-bottom:22px}
 .eyebrow::after{content:"";width:64px;height:1px;background:currentColor;opacity:.6}
 .luz{color:var(--azul-luz)}
@@ -83,7 +83,7 @@ header.nav .btn{padding:12px 22px;font-size:.8rem}
 @media(max-width:1000px){.hero .wrap{grid-template-columns:1fr}.reel-wrap{justify-self:center;margin-top:20px}.reel{width:300px}}
 .hero .tag{display:inline-flex;gap:10px;align-items:center;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:8px 18px;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:28px;background:rgba(255,255,255,.04)}
 .hero .tag b{color:var(--azul-luz)}
-.hero h1{font-size:clamp(2.6rem,6vw,5.4rem);font-weight:700;max-width:820px}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4.8rem);letter-spacing:-.02em;font-weight:700;max-width:820px}
 .hero h1 span{display:block;background:linear-gradient(90deg,#fff 0%,#9fd3ff 60%,#4fb3ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero .sub{font-size:clamp(1.1rem,2vw,1.4rem);max-width:620px;margin:26px 0 12px;color:#d7e4f3}
 .hero .meta{display:flex;flex-wrap:wrap;gap:12px 28px;margin:28px 0 40px;font-weight:600}
@@ -92,7 +92,7 @@ header.nav .btn{padding:12px 22px;font-size:.8rem}
 .hero .ctas{display:flex;flex-wrap:wrap;gap:16px}
 .countdown{display:flex;gap:12px;margin-top:48px}
 .countdown div{min-width:84px;padding:14px 10px;text-align:center;border:1px solid rgba(255,255,255,.15);border-radius:16px;background:rgba(255,255,255,.04)}
-.countdown b{display:block;font-family:"Chakra Petch";font-size:2rem;line-height:1}
+.countdown b{display:block;font-family:Montserrat,sans-serif;font-weight:800;font-size:2rem;line-height:1}
 .countdown small{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:#9fb6cf}
 .countdown-label{margin-top:40px;font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;color:#9fb6cf}
 .countdown-label+.countdown{margin-top:12px}
@@ -104,7 +104,7 @@ header.nav .btn{padding:12px 22px;font-size:.8rem}
 .proof .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
 .proof .item{padding:44px 20px;text-align:center;border-left:1px solid rgba(255,255,255,.1)}
 .proof .item:first-child{border-left:0}
-.proof b{font-family:"Chakra Petch";font-size:clamp(2.2rem,4vw,3.4rem);display:block;line-height:1;color:#fff}
+.proof b{font-family:Montserrat,sans-serif;font-weight:800;font-size:clamp(2.2rem,4vw,3.4rem);display:block;line-height:1;color:#fff}
 .proof span{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:#a9c3e0}
 @media(max-width:760px){.proof .wrap{grid-template-columns:1fr 1fr}.proof .item:nth-child(3){border-left:0}.proof .item{border-top:1px solid rgba(255,255,255,.1)}}
 
@@ -123,7 +123,7 @@ header.nav .btn{padding:12px 22px;font-size:.8rem}
 .tema-img{border-radius:var(--raio);overflow:hidden;position:relative;aspect-ratio:3/4;border:1px solid rgba(120,190,255,.25)}
 .tema-img img{width:100%;height:100%;object-fit:cover}
 .tema p{margin-bottom:18px;font-size:1.08rem}
-.tema blockquote{font-family:"Chakra Petch";text-transform:uppercase;font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.15;color:#fff;margin:34px 0 0;padding-top:26px;border-top:1px solid rgba(255,255,255,.15)}
+.tema blockquote{font-family:Montserrat,sans-serif;font-weight:800;text-transform:uppercase;font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.15;color:#fff;margin:34px 0 0;padding-top:26px;border-top:1px solid rgba(255,255,255,.15)}
 .tema blockquote span{color:var(--azul-luz)}
 @media(max-width:900px){.tema-grid{grid-template-columns:1fr}.tema-img{aspect-ratio:16/10}}
 
@@ -135,7 +135,7 @@ header.nav .btn{padding:12px 22px;font-size:.8rem}
 .jcard .pill{display:inline-block;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;padding:7px 14px;border-radius:999px;margin-bottom:22px}
 .jcard.back .pill{background:#e7f1fb;color:var(--petroleo)}
 .jcard.stage .pill{background:rgba(79,179,255,.18);color:var(--azul-claro)}
-.jcard h3{font-family:"Chakra Petch";text-transform:uppercase;font-size:2.4rem;line-height:1;margin-bottom:6px;color:var(--profundo)}
+.jcard h3{font-family:Montserrat,sans-serif;font-weight:800;text-transform:uppercase;font-size:2.4rem;line-height:1;margin-bottom:6px;color:var(--profundo)}
 .jcard.stage h3{color:#fff}
 .jcard .kicker{font-weight:600;margin-bottom:18px;color:var(--petroleo)}
 .jcard.stage .kicker{color:var(--azul-luz)}
@@ -151,8 +151,8 @@ header.nav .btn{padding:12px 22px;font-size:.8rem}
 .ato{border:1px solid rgba(120,190,255,.22);border-radius:var(--raio);padding:30px 26px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.01));position:relative;transition:transform .25s,border-color .25s}
 .ato:hover{transform:translateY(-6px);border-color:rgba(120,190,255,.6)}
 .ato .when{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:#8fb0d3;font-weight:600}
-.ato .num{font-family:"Chakra Petch";font-size:1rem;color:var(--azul-luz);margin:18px 0 2px;letter-spacing:.2em}
-.ato h3{font-family:"Chakra Petch";text-transform:uppercase;font-size:2rem;line-height:1;margin-bottom:14px}
+.ato .num{font-family:Montserrat,sans-serif;font-weight:800;font-size:1rem;color:var(--azul-luz);margin:18px 0 2px;letter-spacing:.2em}
+.ato h3{font-family:Montserrat,sans-serif;font-weight:800;text-transform:uppercase;font-size:2rem;line-height:1;margin-bottom:14px}
 .ato p{font-size:.94rem;color:#c7d6e8}
 .ato.hot{border-color:var(--azul-luz);box-shadow:0 0 60px -20px rgba(79,179,255,.6)}
 .ato.hot .badge{position:absolute;top:-12px;right:20px;background:var(--azul-luz);color:#001a33;font-size:.65rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
@@ -164,8 +164,8 @@ header.nav .btn{padding:12px 22px;font-size:.8rem}
 /* ---------- pilares ---------- */
 .pilares{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:50px}
 .pilar{background:#fff;border:1px solid #e3e9f1;border-radius:20px;padding:26px 22px;display:flex;flex-direction:column}
-.pilar .n{font-family:"Chakra Petch";color:var(--azul-luz);font-weight:700;letter-spacing:.2em;font-size:.85rem}
-.pilar h3{font-family:"Chakra Petch";text-transform:uppercase;font-size:1.55rem;color:var(--profundo);line-height:1.05;margin:8px 0 2px}
+.pilar .n{font-family:Montserrat,sans-serif;font-weight:800;color:var(--azul-luz);font-weight:700;letter-spacing:.2em;font-size:.85rem}
+.pilar h3{font-family:Montserrat,sans-serif;font-weight:800;text-transform:uppercase;font-size:1.55rem;color:var(--profundo);line-height:1.05;margin:8px 0 2px}
 .pilar .area{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cinza);font-weight:700;margin-bottom:14px}
 .pilar p{font-size:.88rem;color:#3c4858;margin-bottom:14px}
 .pilar ul{list-style:none;border-top:1px solid #edf1f6;padding-top:12px;margin-top:auto}
@@ -180,11 +180,11 @@ header.nav .btn{padding:12px 22px;font-size:.8rem}
 .host-photo .frame{border-radius:240px 240px 26px 26px;overflow:hidden;aspect-ratio:4/5;border:2px solid rgba(120,190,255,.45);box-shadow:0 40px 80px -30px rgba(0,0,0,.7)}
 .host-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
 .host-photo .chip{position:absolute;left:-14px;bottom:36px;background:var(--azul-luz);color:#001a33;font-weight:800;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;padding:10px 16px;border-radius:12px}
-.host h3{font-family:"Chakra Petch";text-transform:uppercase;font-size:clamp(2.6rem,5vw,4.2rem);line-height:.95;color:#fff;margin-bottom:10px}
+.host h3{font-family:Montserrat,sans-serif;font-weight:800;text-transform:uppercase;font-size:clamp(2.6rem,5vw,4.2rem);line-height:.95;color:#fff;margin-bottom:10px}
 .host h3 span{color:var(--azul-luz)}
 .host .role{font-size:.85rem;letter-spacing:.18em;text-transform:uppercase;color:#a9c3e0;font-weight:600;margin-bottom:26px}
 .host p{margin-bottom:16px;font-size:1.06rem}
-.host .sign{font-family:"Chakra Petch";text-transform:uppercase;font-size:1.3rem;color:#fff;margin-top:24px}
+.host .sign{font-family:Montserrat,sans-serif;font-weight:800;text-transform:uppercase;font-size:1.3rem;color:#fff;margin-top:24px}
 .book{display:flex;gap:16px;align-items:center;margin-top:26px;padding:18px 22px;border:1px solid rgba(255,255,255,.15);border-radius:16px;background:rgba(255,255,255,.03)}
 .book .ico{width:46px;height:46px;border-radius:12px;background:rgba(79,179,255,.15);display:grid;place-items:center;color:var(--azul-luz);flex:0 0 46px}
 @media(max-width:900px){.host-grid{grid-template-columns:1fr}.host-photo{max-width:420px;margin:0 auto}}
@@ -192,10 +192,10 @@ header.nav .btn{padding:12px 22px;font-size:.8rem}
 /* ---------- palestrantes ---------- */
 .speakers{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:50px}
 .spk{aspect-ratio:3/4;border-radius:20px;position:relative;overflow:hidden;background:linear-gradient(160deg,#0b2a55,#00004C);display:flex;flex-direction:column;justify-content:flex-end;padding:22px;color:#fff}
-.spk::before{content:"?";position:absolute;inset:0;display:grid;place-items:center;font-family:"Chakra Petch";font-size:9rem;color:rgba(255,255,255,.06)}
+.spk::before{content:"?";position:absolute;inset:0;display:grid;place-items:center;font-family:Montserrat,sans-serif;font-weight:800;font-size:9rem;color:rgba(255,255,255,.06)}
 .spk .silh{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:58%;opacity:.18;filter:blur(1px)}
 .spk small{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--azul-luz);font-weight:700}
-.spk b{font-family:"Chakra Petch";text-transform:uppercase;font-size:1.25rem;line-height:1.05;display:block;margin-top:6px}
+.spk b{font-family:Montserrat,sans-serif;font-weight:800;text-transform:uppercase;font-size:1.25rem;line-height:1.05;display:block;margin-top:6px}
 .spk .act{font-size:.8rem;color:#a9c3e0;margin-top:4px}
 .notify{margin-top:36px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;background:#fff;border:1px dashed #b9cde3;border-radius:18px;padding:24px 28px}
 .notify p{font-weight:600;color:var(--profundo)}
@@ -205,7 +205,7 @@ header.nav .btn{padding:12px 22px;font-size:.8rem}
 .alumni{margin-top:30px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;padding:22px 28px;border-radius:18px;background:linear-gradient(90deg,#00004C,#002F4E);color:#fff}
 .alumni-label{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--azul-luz)}
 .alumni-names{display:flex;flex-wrap:wrap;gap:10px 26px}
-.alumni-names b{font-family:"Chakra Petch";text-transform:uppercase;font-size:1.25rem;letter-spacing:.02em}
+.alumni-names b{font-family:Montserrat,sans-serif;font-weight:800;text-transform:uppercase;font-size:1.25rem;letter-spacing:.02em}
 
 /* ---------- público ---------- */
 .forwho{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
@@ -218,11 +218,18 @@ header.nav .btn{padding:12px 22px;font-size:.8rem}
 /* ---------- prêmio ---------- */
 .premio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
 .cat{border:1px solid rgba(120,190,255,.22);border-radius:20px;padding:30px;background:rgba(255,255,255,.03)}
+.cat{display:flex;flex-direction:column}
+.cat i{font-style:normal;font-size:1.6rem;margin-bottom:10px}
 .cat h3{font-size:1.15rem;margin-bottom:10px}
+.cat p{flex:1}
+.cat-cta{margin-top:18px;display:inline-flex;align-items:center;gap:8px;color:var(--azul-luz);font-weight:700;font-size:.9rem;text-decoration:none;letter-spacing:.02em}
+.cat-cta:hover{color:#fff}
+.cat-cta-box{background:linear-gradient(140deg,rgba(79,179,255,.18),rgba(79,179,255,.05));border-color:rgba(79,179,255,.5)}
+.cat-cta-box .prazo{flex:0;margin-top:14px;color:#fff;font-size:.95rem}
 .cat p{font-size:.93rem;color:#c3d3e6}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
 .step{display:flex;gap:16px;align-items:flex-start}
-.step b{font-family:"Chakra Petch";font-size:2rem;color:var(--azul-luz);line-height:1}
+.step b{font-family:Montserrat,sans-serif;font-weight:800;font-size:2rem;color:var(--azul-luz);line-height:1}
 .step p{font-size:.93rem}
 @media(max-width:860px){.premio-grid,.steps{grid-template-columns:1fr}}
 
@@ -230,19 +237,19 @@ header.nav .btn{padding:12px 22px;font-size:.8rem}
 .tickets{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:54px;align-items:stretch}
 .tk{background:#fff;border:1px solid #e3e9f1;border-radius:26px;padding:36px 32px;display:flex;flex-direction:column;position:relative}
 .tk .type{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--cinza)}
-.tk h3{font-family:"Chakra Petch";text-transform:uppercase;font-size:2rem;line-height:1;color:var(--profundo);margin:10px 0 12px}
+.tk h3{font-family:Montserrat,sans-serif;font-weight:800;text-transform:uppercase;font-size:2rem;line-height:1;color:var(--profundo);margin:10px 0 12px}
 .tk .desc{font-size:.95rem;color:#3c4858;margin-bottom:22px}
 .tk ul{list-style:none;display:grid;gap:10px;margin-bottom:28px}
 .tk li{display:flex;gap:10px;font-size:.93rem;align-items:flex-start}
 .tk li svg{flex:0 0 18px;width:18px;height:18px;margin-top:3px;color:#1e8be6}
 .tk .price{margin-top:auto;padding-top:22px;border-top:1px solid #edf1f6;margin-bottom:18px}
 .tk .price small{display:block;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--cinza);font-weight:700}
-.tk .price b{font-family:"Chakra Petch";font-size:1.6rem;color:var(--profundo)}
+.tk .price b{font-family:Montserrat,sans-serif;font-weight:800;font-size:1.6rem;color:var(--profundo)}
 .tk .btn{justify-content:center}
 .pass{display:grid;grid-template-columns:1.4fr 1fr;margin:54px auto 0;max-width:980px;background:#fff;border:2px solid var(--azul-luz);border-radius:26px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(0,0,76,.45)}
 .pass-info{padding:40px}
 .pass-info .type{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--cinza)}
-.pass-info h3{font-family:"Chakra Petch";text-transform:uppercase;font-size:2rem;line-height:1.05;color:var(--profundo);margin:10px 0 12px}
+.pass-info h3{font-family:Montserrat,sans-serif;font-weight:800;text-transform:uppercase;font-size:2rem;line-height:1.05;color:var(--profundo);margin:10px 0 12px}
 .pass-info .desc{color:#3c4858;margin-bottom:20px}
 .pass-info ul{list-style:none;display:grid;gap:11px}
 .pass-info li{position:relative;padding-left:28px;font-size:.97rem}
@@ -250,7 +257,7 @@ header.nav .btn{padding:12px 22px;font-size:.8rem}
 .pass-buy{position:relative;background:linear-gradient(160deg,var(--profundo),#06306a);color:#dbe8f6;padding:48px 36px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:6px}
 .pass-buy .ribbon{background:var(--azul-luz);color:#001a33;font-size:.7rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:7px 16px;border-radius:999px;margin-bottom:14px}
 .pass-buy small{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--azul-luz)}
-.pass-price{font-family:"Chakra Petch";font-size:3.4rem;line-height:1;color:#fff}
+.pass-price{font-family:Montserrat,sans-serif;font-weight:800;font-size:3.4rem;line-height:1;color:#fff}
 .pass-buy .next{font-size:.88rem;color:#ffb37a;font-weight:600;margin-bottom:18px}
 .pass-buy .btn{width:100%;justify-content:center}
 .pass-buy .pay{font-size:.8rem;color:#a9c3e0;margin-top:8px}
@@ -266,14 +273,14 @@ header.nav .btn{padding:12px 22px;font-size:.8rem}
 .biz .card{border-radius:var(--raio);padding:44px;position:relative;overflow:hidden}
 .biz .team{background:#fff;border:1px solid #e3e9f1}
 .biz .spons{background:linear-gradient(140deg,#00004C,#002F4E);color:#dbe8f6}
-.biz h3{font-family:"Chakra Petch";text-transform:uppercase;font-size:2rem;line-height:1.05;margin-bottom:14px;color:var(--profundo)}
+.biz h3{font-family:Montserrat,sans-serif;font-weight:800;text-transform:uppercase;font-size:2rem;line-height:1.05;margin-bottom:14px;color:var(--profundo)}
 .biz .spons h3{color:#fff}
 .biz p{margin-bottom:22px}
 @media(max-width:860px){.biz{grid-template-columns:1fr}}
 
 /* ---------- local ---------- */
 .local-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
-.local-info h3{font-family:"Chakra Petch";text-transform:uppercase;font-size:2.4rem;color:#fff;line-height:1;margin-bottom:10px}
+.local-info h3{font-family:Montserrat,sans-serif;font-weight:800;text-transform:uppercase;font-size:2.4rem;color:#fff;line-height:1;margin-bottom:10px}
 .local-info dl{display:grid;gap:18px;margin:28px 0 34px}
 .local-info dt{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:#8fb0d3;font-weight:700}
 .local-info dd{font-size:1.05rem;color:#fff;font-weight:500}
@@ -292,7 +299,7 @@ header.nav .btn{padding:12px 22px;font-size:.8rem}
 
 /* ---------- cta final ---------- */
 .final{text-align:center;background:radial-gradient(900px 500px at 50% 120%,#0b5fc4 0%,transparent 60%),var(--noite);color:#dbe8f6;padding:130px 0}
-.final h2{font-family:"Chakra Petch";text-transform:uppercase;font-size:clamp(2.6rem,7vw,5.6rem);line-height:.98;color:#fff;margin-bottom:24px}
+.final h2{font-family:Montserrat,sans-serif;font-weight:800;text-transform:uppercase;font-size:clamp(2.6rem,7vw,5.6rem);line-height:.98;color:#fff;margin-bottom:24px}
 .final h2 span{color:var(--azul-luz)}
 .final p{max-width:640px;margin:0 auto 40px;font-size:1.15rem}
 
@@ -339,12 +346,12 @@ footer .copy{width:100%;border-top:1px solid rgba(255,255,255,.08);padding-top:2
 .tl-hint{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:#8fb0d3;margin-bottom:10px}
 .big-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:44px 0 40px}
 .big-stats div{border:1px solid rgba(120,190,255,.22);border-radius:18px;padding:24px;background:rgba(255,255,255,.03)}
-.big-stats b{display:block;font-family:"Chakra Petch";font-size:clamp(2rem,3.6vw,3rem);color:#fff;line-height:1}
+.big-stats b{display:block;font-family:Montserrat,sans-serif;font-weight:800;font-size:clamp(2rem,3.6vw,3rem);color:#fff;line-height:1}
 .big-stats span{font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:#a9c3e0}
 .timeline{display:flex;gap:14px;overflow-x:auto;padding:8px 2px 18px;scroll-snap-type:x mandatory}
 .ti{flex:0 0 230px;scroll-snap-align:start;border-top:3px solid rgba(79,179,255,.45);padding:16px 4px 0;position:relative}
 .ti::before{content:"";position:absolute;top:-8px;left:0;width:13px;height:13px;border-radius:50%;background:var(--azul-luz);box-shadow:0 0 0 4px rgba(79,179,255,.2)}
-.ti i{font-style:normal;font-family:"Chakra Petch";font-size:1.5rem;color:var(--azul-luz)}
+.ti i{font-style:normal;font-family:Montserrat,sans-serif;font-weight:800;font-size:1.5rem;color:var(--azul-luz)}
 .ti b{display:block;color:#fff;font-size:1rem;margin:4px 0 6px;line-height:1.25}
 .ti span{font-size:.86rem;color:#b9cbe0}
 .ti.now{border-top-color:#fff}.ti.now i{color:#fff}
@@ -364,11 +371,11 @@ footer .copy{width:100%;border-top:1px solid rgba(255,255,255,.08);padding-top:2
 .yt .play::after{content:"";position:absolute;left:27px;top:21px;border-left:18px solid #00122a;border-top:12px solid transparent;border-bottom:12px solid transparent}
 .yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .logos{display:flex;flex-wrap:wrap;gap:10px 34px;margin-top:34px;padding-top:26px;border-top:1px solid rgba(255,255,255,.1)}
-.logos span{font-family:"Chakra Petch";text-transform:uppercase;letter-spacing:.12em;font-size:1rem;color:#a9c3e0}
+.logos span{font-family:Montserrat,sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:1rem;color:#a9c3e0}
 @media(max-width:860px){.videos{grid-template-columns:1fr}}
 
 /* ---------- foto de fundo do prêmio e patrocínio ---------- */
-#premio .premio-bg{position:absolute;inset:0;background:url(assets/premio-ser-gente.jpg) center 85%/cover;opacity:.14}
+#premio .premio-bg{position:absolute;inset:0;background:url(assets/premio-ser-gente.jpg) center 85%/cover;opacity:.07}
 #premio .wrap{position:relative}
 .biz .spons{background:linear-gradient(140deg,rgba(0,0,76,.92),rgba(0,47,78,.88)),url(assets/estande-2026.jpg) center/cover}
 .tk .price .next{display:block;font-size:.8rem;color:#c2410c;font-weight:600;margin-top:4px}
@@ -380,7 +387,7 @@ footer .copy{width:100%;border-top:1px solid rgba(255,255,255,.08);padding-top:2
 .lotes ol{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .lotes li{border:1px solid #e3e9f1;border-radius:14px;padding:14px 16px;position:relative}
 .lotes li span{display:block;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--cinza)}
-.lotes li b{font-family:"Chakra Petch";font-size:1.5rem;color:var(--profundo)}
+.lotes li b{font-family:Montserrat,sans-serif;font-weight:800;font-size:1.5rem;color:var(--profundo)}
 .lotes li small{display:block;font-size:.8rem;color:#56606e}
 .lotes li.past{opacity:.45}.lotes li.past b{text-decoration:line-through}
 .lotes li.now{background:linear-gradient(140deg,#00004C,#002F4E);border-color:transparent}
@@ -763,19 +770,21 @@ footer .copy{width:100%;border-top:1px solid rgba(255,255,255,.08);padding-top:2
     <div class="reveal">
       <div class="eyebrow luz">Reconhecimento</div>
       <h2 class="title" style="color:#fff">Prêmio <span class="prata">Ser Gente</span></h2>
-      <p class="lead">O momento mais emocionante do CONGERHI. Em 2026, foram mais de 20 finalistas. Reconhecemos os protagonistas das melhores práticas humanas e inovadoras do Estado de São Paulo, porque mobilizar-se em prol das pessoas é contribuir para um mundo melhor.</p>
+      <p class="lead">O momento mais emocionante do CONGERHI. Em 2026, foram mais de 20 finalistas, e em 2027 são <strong>cinco categorias</strong>. O prêmio reconhece os protagonistas das melhores práticas humanas e inovadoras do Estado de São Paulo, porque mobilizar-se em prol das pessoas é contribuir para um mundo melhor.</p>
     </div>
     <div class="premio-grid">
-      <div class="cat reveal"><h3>Profissional Referência em RH</h3><p>Quem contribui com a classe por meio de palestras, artigos e compartilhamento de conhecimento, e é lembrado pelo legado que deixa aos colegas.</p></div>
-      <div class="cat reveal"><h3>Práticas Inovadoras de RH</h3><p>Práticas que atendem de forma inovadora às necessidades dos colaboradores e contribuem para atrair, desenvolver ou reter talentos.</p></div>
-      <div class="cat reveal"><h3>Impacto na Sociedade</h3><p>Projetos sociais de empresas privadas que contribuem para o desenvolvimento humano e para a independência dos cidadãos.</p></div>
+      <div class="cat reveal"><i>🏆</i><h3>Profissional Referência em RH</h3><p>A indicação é pública: marque o profissional nos comentários do post da Tati no LinkedIn e conte por que ele merece.</p><a class="cat-cta" href="https://www.linkedin.com/feed/update/urn:li:activity:7522207960157044736/" target="_blank" rel="noopener">Indicar no LinkedIn <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="cat reveal"><i>💡</i><h3>Práticas Inovadoras de RH</h3><p>Práticas que atendem de forma inovadora às necessidades dos colaboradores e ajudam a atrair, desenvolver ou reter talentos.</p><a class="cat-cta" href="https://docs.google.com/forms/d/e/1FAIpQLScF-dn5B6usiHUNtf5EYXiHDqLbdXqmHZMzffmzK5HvF-L_7g/viewform" target="_blank" rel="noopener">Inscrever prática <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="cat reveal"><i>🤝</i><h3>Impacto na Sociedade</h3><p>Projetos sociais de empresas que contribuem para o desenvolvimento humano e para a independência dos cidadãos.</p><a class="cat-cta" href="https://docs.google.com/forms/d/e/1FAIpQLScjJO1KoM3kFkoDjVWXZeiTf9eho6TEB51hNBn3v7Zu74KFDQ/viewform" target="_blank" rel="noopener">Inscrever projeto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="cat reveal"><i>🎓</i><h3>Educação Corporativa</h3><p>Programas que desenvolvem pessoas e lideranças dentro da empresa, com aprendizado que vira resultado.</p><a class="cat-cta" href="https://docs.google.com/forms/d/e/1FAIpQLScKxI1dISD43swttzfpy9vZyrh3aY62rZH-HIyFHfK53uKRVg/viewform" target="_blank" rel="noopener">Inscrever programa <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="cat reveal"><i>💚</i><h3>Saúde Mental e Cuidado com as Pessoas</h3><p>Iniciativas que cuidam de verdade de quem faz a empresa acontecer, alinhadas ao novo momento da NR-1.</p><a class="cat-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSfElhdkbLJSPkj6oquZOU4a57-SNrdL2W_B3u811HdVnH5beg/viewform" target="_blank" rel="noopener">Inscrever iniciativa <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="cat cat-cta-box reveal"><h3>Conhece alguém que merece ser visto?</h3><p>Pensa numa pessoa, num projeto ou numa empresa. Se for a sua, inscreva! E encaminhe para quem precisa saber.</p><p class="prazo">📅 Indicações e inscrições até <b>30/01/2027</b></p></div>
     </div>
     <div class="steps reveal">
-      <div class="step"><b>01</b><p>Indicação <strong>sem nenhum custo</strong>, com inscrições abertas até janeiro.</p></div>
+      <div class="step"><b>01</b><p>Indicações e inscrições <strong>sem nenhum custo</strong>, até 30/01/2027.</p></div>
       <div class="step"><b>02</b><p>Os finalistas se comprometem a adquirir 10 passaportes presenciais.</p></div>
-      <div class="step"><b>03</b><p>O reconhecimento acontece no palco do congresso presencial, em Bauru.</p></div>
+      <div class="step"><b>03</b><p>A <strong>votação acontece durante o CONGERHI</strong>, no palco em Bauru.</p></div>
     </div>
-    <div style="margin-top:40px" class="reveal"><a class="btn btn-ghost" href="#" data-link="premio">Indicar um case ao Prêmio</a></div>
   </div>
 </section>
 
@@ -929,7 +938,6 @@ const CONFIG = {
   dataEvento: "2027-03-19T09:00:00-03:00",
   links: {
     presencial: "",   // link de pagamento Asaas do Passaporte (vazio = WhatsApp com o lote atual)
-    premio: "",       // formulário de indicação do Prêmio Ser Gente
     patrocinio: "https://wa.me/5514996658272?text=Ol%C3%A1!%20Quero%20receber%20o%20m%C3%ADdia%20kit%20de%20patroc%C3%ADnio%20do%20CONGERHI%202027",
     whatsapp: "https://wa.me/5514996658272?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20CONGERHI%202027",
     instagram: "https://www.instagram.com/congerhi/",
